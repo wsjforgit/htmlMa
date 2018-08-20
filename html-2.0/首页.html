@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link href="css/bootstrap.min.css?v=1" rel="stylesheet">
+    <link href="css/index.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .banner {
+            position: relative;
+        }
+
+        .banner .login {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(25, 25, 25, 0.5);
+            height: 100%;
+            width: 300px;
+        }
+
+        .box {
+            float: left;
+            background-color: #fff;
+            line-height: 25px;
+        }
+
+        .box ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box li {
+            height: 25px;
+            line-height: 25px;
+            font-size: 12px;
+            list-style-type: none;
+        }
+
+        .box0 {
+            width: 420px;
+        }
+
+        .box0 li {
+            padding-left: 50px;
+        }
+
+        .box0 .yqr {
+            background: url("image/icon_yqr.png") no-repeat;
+            /* background-position: 0 5px; */
+        }
+
+        .box0 .tdr {
+            background: url("image/icon_tdr.png") no-repeat;
+            /* background-position: 0 5px; */
+        }
+
+        .box1 {
+            width: 250px;
+        }
+
+        .box1 li {
+            padding-left: 10px;
+            background: url("image/icon-dian_lu.png") no-repeat;
+            background-position: 0 5px;
+        }
+
+        .box2 {
+            width: 250px;
+        }
+
+        .box2 li {
+            padding-left: 10px;
+            background: url("image/icon-dian_blue.png") no-repeat;
+            background-position: 0 5px;
+        }
+
+        .box3 {
+            width: 250px;
+        }
+
+        .box3 li {
+            padding-left: 10px;
+            background: url("image/icon-dian_red.png") no-repeat;
+            background-position: 0 5px;
+        }
+
+        #marqueebox0 {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        #marqueebox1,
+        #marqueebox2,
+        #marqueebox3 {
+            height: 163px;
+            overflow: hidden;
+        }
+
+        .col-xs-4,
+        .col-sm-4,
+        .col-xs-6,
+        .col-sm-6 {
+            padding-left: 1px;
+            padding-right: 1px;
+        }
+
+        .c2 a div:hover {
+            background-color: #eee;
+            /* color: #fff; */
+        }
+
+        .hd span {
+            display: block;
+            height: 40px;
+            width: 20px;
+            cursor: pointer;
+        }
+
+        .hd .next {
+            background: url('image/icom_left.png') no-repeat center;
+            position: absolute;
+            right: 0;
+            top: 20px;
+            z-index: 10;
+        }
+
+        .hd .prev {
+            background: url('image/icom_right.png') no-repeat center;
+            position: absolute;
+            left: 0;
+            top: 20px;
+            z-index: 10;
+        }
+
+        .foots_nav {
+            color: #ddd;
+        }
+
+        .foots_nav a {
+            color: #7a7a7a;
+        }
+
+        .foots_nav a:hover {
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hender-top">
+                <span>您好！京西供应链欢迎您</span>
+                <ul class="list-inline navbar-right navbarBorderR right">
+                    <li>
+                        <a href="http://www.westscm.com/home.do">返回京西供应链首页</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/login!showLogin.do">资产会员中心</a>
+                    </li>
+                    <li>
+                        <a href="会员中心.html">融资会员中心</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">【退出】</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hender">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <img src="image/logo.png" style="height: 55px;">
+                        </div>
+                        <ul class="list-inline">
+                            <li class="active">
+                                <a href="http://www.westscm.com/home.do">首页</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/supplyIndex.do">资产</a>
+                            </li>
+                            <li>
+                                <a href="金融.html">金融</a>
+                            </li>
+                            <!-- <li>
+                                <a href="物流.html">物流</a>
+                            </li> -->
+                            <li>
+                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do">资讯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="banner row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-exmple-generic" data-slide-to="0" class="active"></li>
+                    <!-- <li data-target="#carousel-exmple-generic" data-slide-to="1"></li> -->
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="#">
+                            <img src="image/banner/index-banner1.png">
+                        </a>
+                    </div>
+                    <!-- <div class="item">
+                        <a href="#">
+                            <img src="image/banner/index-banner2.jpg">
+                        </a>
+                    </div> -->
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="icon icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="icon icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+            </div>
+            <!-- <div class="login">
+                <div style="margin-top:45px;margin-left:20px;background-color: #ccc;height: 240px; width: 260px;">
+                </div>
+            </div> -->
+        </div>
+
+        <div class="margin-t row h4 padding-l-xs" style="border-left:#0096e1 5px solid;"><strong>资产在线</strong>
+            <small class="margin-l">实时信息</small>
+        </div>
+        <div class="margin-b bg-white row">
+            <div class="margin-r" style="width: 220px; height: 330px; float: left">
+                <img src="image/index/img1.png">
+            </div>
+            <div class="c1" style="margin-left: 250px; position: absolute;">
+                <div class="con txtMarquee-top01">
+                    <div class="record_title clearfix border-b" style="height: 40px; line-height: 40px;">
+                        <div style="width: 120px;float: left;">订单编号</div>
+                        <div style="width: 200px;float: left;">卖 方</div>
+                        <div style="width: 200px;float: left;">品 名</div>
+                        <div style="width: 100px;float: left;">规格</div>
+                        <div style="width: 80px;float: left;">数 量</div>
+                        <div style="width: 50px;float: left;">单位</div>
+                        <div style="width: 80px;float: left;">单 价（元）</div>
+                        <div style="width: 120px;float: left;">成交时间</div>
+                    </div>
+                    <div class="record_con bd01">
+                        <div class="tempWrap" id="marqueebox0" style="overflow:hidden; position:relative; height:287px">
+                            <ul class="list-unstyled">
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                                <li style="height: 40px; line-height: 40px;">
+                                    <div style="width: 120px;float: left;">HTCL18000005</div>
+                                    <div style="width: 200px;float: left;">南京东*** ***限公司</div>
+                                    <div style="width: 200px;float: left;">低合金热轧宽钢带钢带</div>
+                                    <div style="width: 100px;float: left;">1.5*2702*C</div>
+                                    <div style="width: 80px;float: left;color:red;">1998.00</div>
+                                    <div style="width: 50px;float: left;">件</div>
+                                    <div style="width: 80px;float: left;">1998.00</div>
+                                    <div style="width: 120px;float: left;">2017-10-21</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 广告 -->
+        <div class="margin-b margin-t-sm bg-white row">
+            <img src="image/img1.jpg">
+        </div>
+        <!-- 第二层 -->
+        <div class="margin-b row">
+            <div class="bg-white margin-r" style="width: 220px; height: 330px; float: left">
+                <img src="image/index/img2.png">
+            </div>
+            <div class="margin-r c2" style="float: left;width: 720px;">
+                <a href="金融.html">
+                    <div class="margin-b padding padding-l-lg padding-r-lg margin-r bg-white text-center" style="height: 155px;width: 350px;float: left;">
+                        <p class="h4 margin-b"><strong>应付款融资</strong></p>
+                        <p>基于交易合同所产生的应收账款，可通过债权转让获得资金 费用低、无质押、手续方便、放款比例高</p>
+                    </div>
+                </a>
+                <a href="金融.html">
+                    <div class="margin-b padding padding-l-lg padding-r-lg bg-white text-center" style="height: 155px;width: 350px;float: left;">
+                        <p class="h4 margin-b"><strong>预付款融资</strong></p>
+                        <p>订购货物时，只需支付一定定金，即可在线申请融资预付全部货款 费用低、审批快、先款后货、可提前还款</p>
+                    </div>
+                </a>
+                <a href="金融.html">
+                    <div class="margin-r padding padding-l-lg padding-r-lg bg-white text-center" style="height: 155px;width: 350px;float: left;">
+                        <p class="h4 margin-b"><strong>订单融资</strong></p>
+                        <p>购买现货时，可在线向平台申请融资完成订单支付 费用低、审批快、现货交易、线上操作 </p>
+                    </div>
+                </a>
+                <a href="金融.html">
+                    <div class="bg-white padding padding-l-lg padding-r-lg text-center" style="height: 155px;width: 350px;float: left;">
+                        <p class="h4 margin-b"><strong>存货融资</strong></p>
+                        <p>以自有现货做质押，在线快捷申请融资 费用低、审批快、赎货便捷、可分批赎货 </p>
+                    </div>
+                </a>
+            </div>
+            <div class="bg-white" style="width: 220px; height: 330px;float: left;">
+                <img src="image/img3_1.png">
+            </div>
+        </div>
+        <!-- 三层 -->
+        <div class="margin-b row">
+            <div class="bg-white margin-r" style="width: 220px; height: 330px; float: left">
+                <a href="#">
+                    <img src="image/index/img4.png">
+                </a>
+            </div>
+            <div class="bg-white margin-r" style="float: left;width: 720px;">
+                <!-- <div class="margin-t h4 margin-l-sm" style="border-left:#0096e1 5px solid;">资产成交记录
+                    <small class="margin-l">实时信息</small>
+                </div> -->
+                <div>
+                    <img src="image/index/img-1.png">
+                </div>
+            </div>
+            <div class="bg-white" style="width: 220px; height: 330px;float: left;">
+                <div class="text-center">
+                    <img src="image/index/img-2.png">
+                </div>
+            </div>
+        </div>
+        <!-- 四层 -->
+        <div class="margin-b margin-t row">
+            <div style="float: left;width: 800px;margin-right: 20px;">
+                <div class="margin-t h4 padding-l-xs" style="border-left:#0096e1 5px solid;"><strong>行业资讯</strong>
+                    <small class="margin-l">行业最新动态</small>
+                </div>
+                <div>
+                    <img src="image/index/img-3.png">
+                </div>
+            </div>
+            <div style="float: left;width: 380px;">
+                <div class="margin-t h4 padding-l-xs" style="border-left:#0096e1 5px solid;">
+                    最新会员
+                </div>
+                <div class="bg-white" style="height: 322px; width: 380px;">
+                    <div class="record_title clearfix border-b" style="height: 40px; line-height: 40px;">
+                        <div style="width: 260px;float: left;margin-left: 20px;">会员名称</div>
+                        <div style="width: 100px;float: left;">注册时间</div>
+                    </div>
+                    <div id="marqueebox1" style="height: 280px;">
+                        <ul class="list-unstyled">
+                            <li style="height: 40px; line-height: 40px;">
+                                <div  style="width: 260px;float: left;margin-left: 20px; overflow: hidden" title="攀枝花市蓝天锻造有限公司">攀枝花市蓝天锻造有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-27</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px; overflow: hidden" title="重庆博建再生资源回收有限公司">重庆博建再生资源回收有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-27</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="上海找钢网信息科技股份有限公司">上海找钢网信息科技股份有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-24</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="辽宁储备物资管理局239处">辽宁储备物资管理局239处</div>
+                                <div style="width: 100px;float: left;">2017-11-24</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="吉林通钢物流有限公司">吉林通钢物流有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-24</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="贵阳欣恒富">贵阳欣恒富</div>
+                                <div style="width: 100px;float: left;">2017-11-24</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="息烽县锦沅物资商贸有限公司">息烽县锦沅物资商贸有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-23</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="首钢贵阳特殊钢有限责任公司">首钢贵阳特殊钢有限责任公司</div>
+                                <div style="width: 100px;float: left;">2017-11-23</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="吉林通钢（营口）物流有限责任公司">吉林通钢（营口）物流有限责任公司</div>
+                                <div style="width: 100px;float: left;">2017-11-21</div>
+                            </li>
+
+                            <li style="height: 40px;line-height: 40px;">
+                                <div style="width: 260px;float: left;margin-left: 20px;" title="吉林金泰钢材有限公司">吉林金泰钢材有限公司</div>
+                                <div style="width: 100px;float: left;">2017-11-11</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 友情链接 -->
+        <p class="margin-b-sm margin-t-sm row h4 padding-l-xs" style="border-left:#0096e1 5px solid;"><strong>友情链接</strong></p>
+        <div id="friendlink" class="bg-white row" style="height: 120px;">
+            <div style="height: 80px; line-height: 80px; margin:20px 0;position: relative;">
+                <ul class="list-unstyled text-center">
+                    <li style="float: left;width: 390px;border-right: 1px #ddd solid;">
+                        <img src="image/CMBC.png">
+                    </li>
+                    <li style="float: left;width: 390px;border-right: 1px #ddd solid;">
+                        <img src="image/CMB.png">
+                    </li>
+                    <li style="float: left;width: 390px;border-right: 1px #ddd solid;">
+                        <img src="image/SDB.png">
+                    </li>
+                </ul>
+                <div class="hd">
+                    <span class="next"></span>
+                    <span class="prev"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;background-color: #252525;">
+        <div class="container">
+            <div class="padding row foots_nav">
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">新手上路</p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=4">会员注册/登录</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=96">如何成为认证会员</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=121">如何成为融资会员</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=15">会员等级及服务范围</a>
+                    </p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">交易指南</p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=128">如何发布供应</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=129">如何发布需求</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=9">如何签订合同</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=10">交易流程</a>
+                    </p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">常见问题</p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=127">忘记密码</a>
+                    </p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">关于我们</p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=123">企业介绍</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=124">战略布局</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=125">在线客服</a>
+                    </p>
+                    <p>
+                        <a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=126">联系我们</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <span>Copyright 2017-2018 All Rights Reserved 版权所有：京西供应链 | 资产交易平台</span>
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        
+        jQuery("#marqueebox0,#marqueebox1").slide({mainCell:"ul",autoPlay:true,effect:"topMarquee",vis:7,interTime:50});
+        // jQuery("#marqueebox1").slide({mainCell:"ul",autoPlay:true,effect:"topMarquee",vis:7,interTime:50});
+
+        jQuery("#friendlink").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:3,interTime:50});
+
+    })
+</script>
+
+</html>

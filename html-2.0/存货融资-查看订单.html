@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>存货融资-查看订单</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .table-dked label{width:30%;margin-bottom: 0;}
+        .table-dked .dked-td-3,
+        .table-dked .dked-td-3a {
+            border: 0;
+            position: relative;
+            color: rgb(10, 130, 209);
+        }
+
+        .table-dked .dked-td-3:after {
+            content: "\e63f";
+            font-family: "iconfont" !important;
+            position: absolute;
+            left: 48%;
+            top: -10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hender-top">
+                <span>您好！京西供应链欢迎您</span>
+                <ul class="list-inline navbar-right navbarBorderR right">
+                    <li>
+                        <a href="http://www.westscm.com/home.do">返回京西供应链首页</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/login!showLogin.do">资产会员中心</a>
+                    </li>
+                    <li>
+                        <a href="会员中心.html">融资会员中心</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">【退出】</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hender">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <img src="image/logo.png" style="height: 55px;">
+                        </div>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.westscm.com/home.do">首页</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/supplyIndex.do">资产</a>
+                            </li>
+                            <li class="active">
+                                <a href="融资.html">融资</a>
+                            </li>
+                            <li>
+                                <a href="物流.html">物流</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do">资讯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="leftMenu">
+                <p><a href="会员中心.html">融资首页</a></p>
+                <ul class="list-unstyled">
+                    
+                    <li>
+                        <p>
+                            <i class="icon  icon-zijin-"></i>资金信息</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="我的账户.html">我的账户</a>
+                            </li>
+                            <li>
+                                <a href="我的资金.html">我的资金</a>
+                            </li>
+                            <li>
+                                <a href="我的授信.html">我的授信</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-yewu"></i>货物信息</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="我的库存.html">我的库存</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <p>
+                            <i class="icon  icon-yewu1"></i>我的融资信息</p>
+                        <ul class="list-unstyled">
+                            <li class="active">
+                                <a href="我要融资.html">我要融资</a>
+                            </li>
+                            <li>
+                                <a href="我的融资订单.html">我的融资订单</a>
+                            </li>
+                            <li>
+                                <a href="我的贷后.html">我的贷后</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="content imprest2Step">
+                <div class="modul1 margin-b clearfix">
+                    <span class="text-blue"> 通钢 </span>
+                    <span> 欢迎来到会员中心！ 上次登录时间 2017-10-23 14:28:35</span>
+                    <span class="right">
+                        <ul class="list-inline">
+                            <li>
+                                <span class="qiye" data-toggle="tooltip" data-placement="right" data-original-title="会员名称：企业名称 test"></span>
+                            </li>
+                            <li>
+                                <span class="user" data-toggle="tooltip" data-placement="right" data-original-title="会员编号：企业名称 test"></span>
+                            </li>
+                            <li>
+                                <span class="mobli" data-toggle="tooltip" data-placement="right" data-original-title="会员手机号：150****111"></span>
+                            </li>
+                            <li>
+                                <span class="message" src="image/icon_xiaoxi.png"><span class="badge" style="background-color: #ed7601">22</span></span>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <p>融资订单详情</p>
+                <div class="modul2 margin-b-lg clearfix">
+                    <p class="margin-b-md">融资订单号：<span class="text-blue">XHD20171111</span></p>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="step">
+                            <ul class="list-unstyled list-inline">
+                                    <li>1.选择库存</li>
+                                    <li>2.确认融资仓单</li>
+                                    <li>3.仓单质押</li>
+                                    <li>4.网银支用贷款</li>
+                                    <li class="active">5.定向支付</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <p>融资信息</p>
+                <div class="modul3 clearfix">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="margin-b">
+                            <div class="clearfix">
+                                <div class="form-group col-sm-4 col-xs-4">
+                                    <label for="">贷款申请编号：</label>
+                                    <span>000000000000</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">生效日期：</label>
+                                    <span>2017-05-21</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">业务类型：</label>
+                                    <span>存货融资</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">贷款银行：</label>
+                                    <span>招商银行</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">品名：</label>
+                                    <span>热轧带钢</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">贷款利率：</label>
+                                    <span>5.22%</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">商品种类：</label>
+                                    <span>带钢</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">贷款金额：</label>
+                                    <span>80.00元</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">还款日期：</label>
+                                    <span>2017-05-21</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">还款到期日：</label>
+                                    <span>2017-05-21</span>
+                                </div>
+                                <div class="form-group  col-sm-4 col-xs-4">
+                                    <label for="">附件：</label>
+                                    <span><a href="#" class="btn btn-xs border-blue">下载附件</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p>融资订单明细</p>
+                <div class="modul4 clearfix">
+                        <div class="clearfix">
+                            <div class="form-group col-sm-4 col-xs-4">
+                                <label for="">合同编号：</label>
+                                <span>000000000000</span>
+                            </div>
+                            <div class="form-group  col-sm-4 col-xs-4">
+                                <label for="">卖方名称：</label>
+                                <span>钢铁有限公司</span>
+                            </div>
+                            <div class="form-group  col-sm-4 col-xs-4">
+                                <label for="">签订时间：</label>
+                                <span>2016-04-05</span>
+                            </div>
+                            <div class="form-group  col-sm-4 col-xs-4">
+                                <label for="">仓库编号：</label>
+                                <span>TS000002</span>
+                            </div>
+                            <div class="form-group  col-sm-4 col-xs-4">
+                                <label for="">仓库名称：</label>
+                                <span>唐山仓库</span>
+                            </div>
+                        </div>
+                    <table class="table table-bordered table-center table-hover">
+                        <thead>
+                            <tr>
+                                <th>品名</th>
+                                <th>规格</th>
+                                <th>捆包号</th>
+                                <th>货物重量</th>
+                                <th>指导价(元)</th>
+                                <th>质押价(元)</th>
+                                <th>货物单价(元)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <p>带钢
+                                        <p>
+                                            <p class="text-left">种类：带钢</p>
+                                            <p class="text-left">牌号：GSC340</p>
+                                            <p class="text-left">产地：河北</p>
+                                </td>
+                                <td>1.5*100*c</td>
+                                <td>卖方名称001 </td>
+                                <td>68.54T</td>
+                                <td>1000.00</td>
+                                <td>1000.00</td>
+                                <td>1000.00</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>带钢
+                                        <p>
+                                            <p class="text-left">种类：带钢</p>
+                                            <p class="text-left">牌号：GSC340</p>
+                                            <p class="text-left">产地：河北</p>
+                                </td>
+                                <td>1.5*100*c</td>
+                                <td>卖方名称001 </td>
+                                <td>68.54T</td>
+                                <td>1000.00</td>
+                                <td>1000.00</td>
+                                <td>1000.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="text-right h5">合同总值：
+                        <span class="text-orange">2000.00元</span>
+                    </p>
+                    <div class="border-t-grey-dashed padding clearfix">
+                        <p>操作：</p>
+                        <p>XX企业发起【存货融资选择订单】操作成功！2017-12-04 12:58:55</p>
+                        <p>XX企业完成融资信息确认。</p>
+                    </div>
+                    <div class="margin row">
+                        <div class="col-sm-offset-5 col-xs-offset-5 col-xs-2"><button class="btn btn-sm border-blue btn-block" onclick="javascript:history.back()">返 回</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Copyright 2017-2018 All Rights Reserved 版权所有：京西供应链 | 资产交易平台</span>
+    </div>
+</body>
+<script src="js/jq.jxgyl.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    })
+</script>
+
+</html>

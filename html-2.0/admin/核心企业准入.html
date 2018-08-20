@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>核心企业准入</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>签约管理</li>
+            <li>核心企业准入</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">核心企业编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">核心企业名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">法人姓名：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">联系人姓名：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">准入时间：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>核心企业编号</th>
+                <th>核心企业名称</th>
+                <th>法人姓名</th>
+                <th>联系人姓名</th>
+                <th>联系人手机号</th>
+                <th>准入时间</th>
+                <th>状态</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-blue">20151112123</td>
+                    <td>通钢</td>
+                    <td>李连</td>
+                    <td>司马章</td>
+                    <td>15088854781</td>
+                    <td>2017年1月27日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="text-blue">2015665366</td>
+                    <td>首钢</td>
+                    <td>马同</td>
+                    <td>郝签</td>
+                    <td>15088854363</td>
+                    <td>2017年2月13日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>  
+				<tr>
+                    <td class="text-blue">201563634</td>
+                    <td>水钢</td>
+                    <td>章归</td>
+                    <td>李可</td>
+                    <td>15078523534</td>
+                    <td>2017年3月25日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="text-blue">201737376</td>
+                    <td>伊犁</td>
+                    <td>钱向</td>
+                    <td>刘一粒</td>
+                    <td>18753530747</td>
+                    <td>2017年5月27日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="text-blue">201748488</td>
+                    <td>贵钢</td>
+                    <td>秦策</td>
+                    <td>路远</td>
+                    <td>18755252384</td>
+                    <td>2017年7月14日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>
+				<tr>
+                    <td class="text-blue">20163637</td>
+                    <td>长治</td>
+                    <td>陈燕</td>
+                    <td>梅连</td>
+                    <td>18675757574</td>
+                    <td>2017年11月14日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-修改.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>				
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总6条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <a href="核心企业准入-新增.html" class="btn border-blue">新 增</a>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

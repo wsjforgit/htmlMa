@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商户资金明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>商户账户管理</li>
+            <li>商户资金明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">资金流水号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">付款账户：</label>
+                <select class="form-control">
+                    <option>选择付款账户</option>
+                    <option>建设银行</option>
+                    <option>工商银行</option>
+                    <option>建设银行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">收款账户：</label>
+                <select class="form-control">
+                    <option>选择收款账户</option>
+                    <option>建设银行</option>
+                    <option>工商银行</option>
+                    <option>建设银行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">资金科目：</label>
+                <select class="form-control">
+                    <option>选择资金科目</option>
+                    <option>仓储费</option>
+                    <option>手续费</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">缴费方：</label>
+                <input class="form-control">
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">授信到期日：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div> -->
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>资金流水号</th>
+                <th>业务单号</th>
+                <th>资金科目</th>
+                <th>缴费金额</th>
+                <th>缴费方</th>
+                <th>缴费时间</th>
+                <th>付款账户</th>
+                <th>付款账号</th>
+                <th>收款账户</th>
+                <th>收款账号</th>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td class="text-blue">SX634758696675</td>
+                    <td class="text-blue">X53534546869</td>
+                    <td>手续费</td>
+                    <td class="text-orange">300.00</td>
+                    <td>上海彪赢实业有限公司</td>
+                    <td>2016-09-01 09:00:00</td>
+                    <td>建设银行</td>
+                    <td>6222 7645 4566 765</td>
+                    <td>招商银行</td>
+                    <td>6222 7645 4364 675</td>
+                </tr>
+                <tr>
+                    <td class="text-blue">SX63475976435</td>
+                    <td class="text-blue">X535349784643</td>
+                    <td>仓储费</td>
+                    <td class="text-orange">1000.00</td>
+                    <td>上海彪赢实业有限公司</td>
+                    <td>2016-09-01 09:00:00</td>
+                    <td>建设银行</td>
+                    <td>6222 7645 4566 765</td>
+                    <td>招商银行</td>
+                    <td>6222 7645 4364 675</td>
+                </tr>
+                <tr>
+                    <td class="text-blue">SX75353623</td>
+                    <td class="text-blue">X53534964858</td>
+                    <td>仓储费</td>
+                    <td class="text-orange">1000.00</td>
+                    <td>富力铁矿石集团</td>
+                    <td>2016-10-01 09:00:00</td>
+                    <td>建设银行</td>
+                    <td>6222 7645 7575 876</td>
+                    <td>招商银行</td>
+                    <td>6222 7645 2487 430</td>
+                </tr>
+                <tr>
+                        <td class="text-blue">SX634758696675</td>
+                        <td class="text-blue">X53534546869</td>
+                        <td>手续费</td>
+                        <td class="text-orange">300.00</td>
+                        <td>上海彪赢实业有限公司</td>
+                        <td>2016-09-01 09:00:00</td>
+                        <td>建设银行</td>
+                        <td>6222 7645 4566 765</td>
+                        <td>招商银行</td>
+                        <td>6222 7645 4364 675</td>
+                    </tr>
+                    <tr>
+                        <td class="text-blue">SX63475976435</td>
+                        <td class="text-blue">X535349784643</td>
+                        <td>仓储费</td>
+                        <td class="text-orange">1000.00</td>
+                        <td>上海彪赢实业有限公司</td>
+                        <td>2016-09-01 09:00:00</td>
+                        <td>建设银行</td>
+                        <td>6222 7645 4566 765</td>
+                        <td>招商银行</td>
+                        <td>6222 7645 4364 675</td>
+                    </tr>
+                    <tr>
+                        <td class="text-blue">SX75353623</td>
+                        <td class="text-blue">X53534964858</td>
+                        <td>仓储费</td>
+                        <td class="text-orange">1000.00</td>
+                        <td>富力铁矿石集团</td>
+                        <td>2016-10-01 09:00:00</td>
+                        <td>建设银行</td>
+                        <td>6222 7645 7575 876</td>
+                        <td>招商银行</td>
+                        <td>6222 7645 2487 430</td>
+                    </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i) {
+        console.log(i);
+    }
+    $(function () {
+        $("#page").initPage(71, 1, fun);
+    })
+</script>
+
+</html>

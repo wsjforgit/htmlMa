@@ -1,0 +1,828 @@
+
+// 变量
+$white:#fff;
+$grey:#999;
+$blue:#0096e1; // 字体颜色
+$blue-deep:#0049a0;
+$orange:#fd713f;
+$red:#f00;
+
+$grey1:#fafafa;// 背景色
+$grey2:#333;
+
+// 背景颜色
+$leftMenuBG:#3c3c3c; // 菜单背景
+$tableBG:#dfeefd;
+
+// 字体颜色
+$text-grey:#cbcbcb;
+$text-blue:$blue;
+$text-blue-deep:$blue-deep;
+$text-orange:$orange;
+$text-red:$red;
+
+body{
+    font-family:"微软雅黑", Verdana, Arial, 'Helvetica Neue';
+    background-color: $grey1;
+    font-size: 12px;
+    color: #333;
+    letter-spacing:0.1px;
+}
+a{
+    color: #333;
+    &:hover{
+        color: $blue;
+        text-decoration: none;
+    }
+}
+ul, ol{
+    margin: 0;
+}
+/* 首页 */
+.hender-top{
+    width: 1200px;
+    margin: auto;
+    height: 38px;
+    line-height: 38px;
+}
+.hender{
+    background-color: #fff;
+    height: 80px;
+    line-height: 80px; 
+    border-top:1px #f0f0f0 solid;
+    border-bottom:  1px #f0f0f0 solid;
+    min-width: 1200px;
+    overflow: hidden;
+    .navbar-header{
+        float: left;
+    }
+    ul{ 
+        float: right;
+        li{
+            margin: 0 20px;
+            font-size: 16px;
+        }
+        li.active a{
+            color: #2ba3e4;
+        }
+    }
+}
+
+/* 左边菜单 */
+.leftMenu{
+    position: absolute;
+    background-color: $leftMenuBG;
+    width: 200px;
+    min-height: 100%;
+    font-weight: bold;
+    &>p{
+        font-size: 20px;
+        padding: 20px 25px;
+        color:$blue;
+        background-color: #252525;
+        a{
+            color: #0096e1;
+        }
+    }
+    &>ul{
+        &>li{
+            text-align: left;
+            padding-bottom: 10px;
+        }
+        p{
+            line-height: 250%;
+            padding: 10px 25px 0 25px;
+            font-size: 18px;
+            color: #999;
+            color:$blue;
+            margin: 0;
+            .icon{
+                vertical-align: middle;
+                font-size: 26px;
+                padding-right: 5px;
+            }
+        }
+        ul li{
+            font-size: 14px;
+            line-height: 200%;
+            position: relative;
+            a{
+                color: #999;
+                display: block;
+                padding: 10px 0px 10px 60px;
+                transition: background-color 1s;
+                -o-transition: background-color 1s;
+                -moz-transition: background-color 1s;
+                -webkit-transition: background-color 1s;
+                -ms-transition:background-color 1s;
+                &:hover{
+                    color: $blue;
+                    background-color: $grey1;
+                    &:before{
+                        content: "";
+                        border-left: 3px #ccc solid;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        ul li.active {
+            background-color: $grey1;
+            a{
+            color: $blue;
+            }
+            &:before{
+                content: "";
+                border-left: 3px #ccc solid;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                position: absolute;
+            }
+        }
+    }
+}
+/* 主体 */
+.content{
+    margin-left: 220px;
+    min-height: 900px;
+    border-right: 1px #dadada solid;
+    padding-right: 20px;
+    &>div{
+        border-bottom: 1px #dadada solid;
+        &:last-child{
+            border-bottom:0;
+        }
+    }
+    &>p{
+        font-size:16px;
+    }
+}
+.modul1{
+    padding: 30px 10px 15px 30px;
+    color: $grey2;
+    &>span{
+        font-size: 16px;
+        display: inline-block;
+    }
+    &>span+span{
+        font-size: 14px;
+    }
+    ul{
+        margin-right: 200px;
+        li+li{
+            margin-left: 30px;
+        }
+    }
+    li>span{
+        height: 16px;
+        width: 16px;
+        display: block;
+        float: left;
+        margin-top: 5px;
+        background: url('../image/icon-top.png') no-repeat;
+        &>span{
+            margin-left: 20px;
+            margin-top:-8px;
+            animation: myfirst 1s ease-in 1s 3;
+        }
+    }
+    @keyframes myfirst{
+        0% { box-shadow:  0 0 0px 0px #ed7601;}
+        50% { box-shadow: 0 0 30px 0px #ed7601;}
+        100% { box-shadow:  0 0 30px 0px #ed7601;}
+    }
+    .qiye{
+        background-position:0 0;
+    }
+    .user{
+        background-position:0 -17px;
+    }
+    .mobli{
+        background-position:0 -35px;
+    }
+    .message{
+        background-position:0 -52px;
+    }
+}
+.modul2, .modul3, .modul4,.modul5{
+    padding: 15px 0px;
+    margin-bottom: 20px;
+    color: $grey2;
+    a{
+        color:$grey2;
+        &:hover{
+            color: $blue;
+        }
+    }
+}
+// 首页
+.index{
+    .modul2{
+        color: #333;
+        .left img{
+            position: absolute;
+            margin-top: 10px;
+        }
+        .left .tishi{
+            margin-left: 70px;
+        }
+        .left .tishi span{
+            color: #2ba3e4;
+        }
+        .right{
+            
+        }
+    }
+    .modul3{
+        p{
+            padding-left: 55px;
+            line-height: 36px;
+            font-size: 16px;
+            color:#0049a0;
+            background: url('../image/icon_rz_m3.png') no-repeat;
+        }
+        .l1 p{
+            background-position-y:0;
+        }
+        .l2 p{
+            background-position-y:-36px;
+        }
+        .l3 p{
+            background-position-y:-73px;
+        }
+        .l4 p{
+            background-position-y:-110px;
+        }
+        li{
+            height: 40px;
+            line-height: 40px;
+            color: #333;
+        }
+        li span{
+            margin-right: 5px;
+        }
+    }
+    .modul4{
+        .h4{
+            margin-left: -10px;
+        }
+    }
+}
+// 我的授信
+.myshouxin,.myzijin,.myfinancingOrder,.imprest1Step{
+    .so-key span{
+        margin:0 10px;
+        line-height: 30px;
+    }
+}
+// 我的资金
+.myzijin{
+    .modul3{
+        padding: 0;
+    }
+}
+// 我的资金充值
+.myzijincz{
+    .modul2{
+        border-top: 1px #ccc solid;
+    }
+    .modul3{
+        .form-group{
+            padding-bottom: 20px;
+        }
+    }
+}
+// 选择银行
+.selectBank{
+    div{
+        input{
+            opacity: 0;
+            display: none;
+        }
+        p{
+            height: 62px;
+            width: 192px;
+            background: url('../image/img_bank.png') no-repeat;
+            border:1px #dadada solid;
+            border-radius: 5px;
+            &:hover{
+                border-color: $blue;
+            }
+        }
+        .ICBC{
+            background-position:0 0;
+        }
+        .CCB{
+            background-position:0 -63px;
+        }
+        .CMB{
+            background-position:0 -126px;
+        }
+        .JXGYL{
+            background-position: 0 -189px;
+        }
+        .selectimg{
+            background-position-x:-193px; 
+            border-color: $blue;
+        }
+    } 
+}
+// 我的融资订单
+.myfinancingOrder{
+    .modul2{
+        padding: 0;
+    }
+}
+// 我要融资
+.myrongzi{
+    .m1{
+        // background: #5b93d0 url('../image/m1.png') no-repeat;
+        
+    }
+    .m1,.m3{
+        color: #333;
+        padding: 60px 0 40px 0;
+        p{
+            margin-bottom: 20px;
+        }
+        span{
+            font-size: 14px;
+        }
+        div:first-child{
+            height: 200px;
+            line-height: 200px;
+            text-align:center;
+            font-size: 14px;
+            p{
+                color: $blue;
+                i{
+                    font-size: 75px;
+                    vertical-align: middle;
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    .m2,.m4{
+        color: #fff;
+        padding: 60px 0 40px 0;
+        text-align: right;
+        span{
+            font-size: 14px;
+            color: #fff;
+        }
+        p{
+            margin-bottom: 20px;
+        }
+        div+div{
+            height: 200px;
+            line-height: 200px;
+            text-align:center;
+            font-size: 14px;
+            color: #fff;
+            p{
+                color: #fff;
+                i{
+                    font-size: 75px;
+                    vertical-align: middle;
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+    .m2{
+        // background: #76488e url('../image/m2.png') no-repeat;
+        background: #fc8e65;
+        background: -webkit-gradient(linear,0 0,right 0,from(#fd713e),to(#fca07d));
+        background: -webkit-linear-gradient(left,#fd713e,#fca07d);
+        background: -moz-linear-gradient(left,#fd713e,#fca07d);
+        background: -o-linear-gradient(left,#fd713e,#fca07d);
+        background: -ms-linear-gradient(left,#fd713e,#fca07d);
+        background: linear-gradient(left,#fd713e,#fca07d);
+        filter:progid:DXimageTransform.Microsoft.gradient(gradientType = 1,startColorstr = #fd713e,endColorstr = #fca07d);
+    }
+    .m3{
+        // background: #fc8e65 url('../image/m3.png') no-repeat;
+        
+    }
+    .m4{
+        // background: #76488e url('../image/m4.png') no-repeat;
+        background: #4a86cf ;
+        background: -webkit-gradient(linear,0 0,right 0,from(#86bff8),to(#4a86cf));
+        background: -webkit-linear-gradient(left,#86bff8,#4a86cf);
+        background: -moz-linear-gradient(left,#86bff8,#4a86cf);
+        background: -o-linear-gradient(left,#86bff8,#4a86cf);
+        background: -ms-linear-gradient(left,#86bff8,#4a86cf);
+        background: linear-gradient(left,#86bff8,#4a86cf);
+        filter:progid:DXimageTransform.Microsoft.gradient(gradientType = 1,startColorstr = #86bff8,endColorstr = #3e75b7);
+    }
+}
+// 我的权限
+.myquanxian{
+    .zjlc{
+        background: url("../image/icon_rzlc.png") no-repeat;
+        text-align: center;
+        &>div{
+            height: 100px;
+            width: 10.74%;
+            color: #fff;
+            font-size: 16px;
+            float: left;
+            p{
+                padding-top: 28%;
+            }
+        }
+    }
+}
+// 我的账户
+.myzhanghu{
+    .modul2,.modul3{
+        border-top:1px #dadada dashed;
+    }
+    .modul2{
+        i{
+            font-size: 96px; 
+            vertical-align: middle;
+        }
+        ul li {
+            div:first-child{
+                border-right:1px #dadada dashed;
+                text-align: center;
+                p{
+                    padding: 15px;
+                }
+            }
+        }
+    }
+    .modul3 li{
+        border-bottom:1px #dadada dashed;
+        line-height:100px;
+    }
+}
+.myqianyue{
+    .lc{
+        color: $blue;
+        p:first-child{
+            border: 1px $blue solid;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .bgJiantou{
+            background: url("../image/icon_jiantou.png") no-repeat;
+            height: 20px;
+            margin: 5px 20px;
+        }
+    }
+}
+// 确认融资信息
+.table-dked label{width:30%;margin-bottom: 0;}
+.table-dked .dked-td-3,
+.table-dked .dked-td-3a {
+    border: 0;
+    position: relative;
+    color: rgb(10, 130, 209);
+}
+
+.table-dked .dked-td-3:after {
+    content: "\e63f";
+    font-family: "iconfont" !important;
+    position: absolute;
+    left: 48%;
+    top: -10px;
+}
+/* 尾部 */
+.footer{
+    height: 90px;
+    line-height: 90px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    .container{
+        background-color: #000;
+    }
+}
+
+// 控件样式
+// table样式
+.table-center{
+    text-align: center;
+    th{
+        background-color: $grey1;
+        text-align: center;
+    }
+    & > tbody > tr > td{
+        display: table-cell;
+        vertical-align: middle;
+    }
+    a{
+        color: $blue;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    // .icon-tishi{
+    //     background:url('../image/icon_tishi.png') 0 50%  no-repeat;
+    //     padding-left: 12px;
+    // }
+}
+.table-tlblue{
+    th,tr td:first-child{
+        background-color: $tableBG;
+    }
+}
+.table-tblue th{
+    background-color: #037ebb;color: #fff;
+}
+.table-borderedblue{
+    tr:nth-child(2n-1){
+        background-color: $tableBG;
+    }
+}
+.table-none{
+    &>tbody>tr>td{
+        border: 0;
+    }
+}
+.table-hover > tbody > tr:hover {
+    background-color: $tableBG;
+  }
+// 按钮
+.btn {
+    &.border-white{
+        // background-color: transparent;
+        background-color:transparent;
+        border-color: $white;
+        color: $white;
+        &:hover{
+            background-color:$white;
+            color: #333;
+        }
+    }
+    &.border-grey{
+        background-color: transparent;
+        border-color: $grey;
+        color: $grey;
+        &:hover{
+            background-color:$grey;
+            color: $white;
+        }
+    }
+    &.border-blue{
+        background-color: transparent;
+        border-color: $blue;
+        color: $blue;
+        &:hover{
+            background-color:$blue;
+            color: $white;
+        }
+    }
+    &.border-orange{
+        background-color: transparent;
+        border-color: $orange;
+        color: $orange;
+        &:hover{
+            background-color:$orange;
+            color: $white;
+        }
+    }
+}
+// 分页
+.page{
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    span{
+        margin: 10px;
+        .icon{
+            vertical-align: top;
+        }
+    }
+    .active a{
+        color: $blue;
+    }
+}
+// tab样式
+.nav-tabs.nav-blue{
+    // margin-bottom: 20px;
+    &>li{
+        width: 150px;
+        text-align: center;
+        font-size: 14px;
+        &.active{
+            &>a,&>a:hover,&>a:focus{
+                border: 0;
+                background-color: transparent;
+                border-bottom: 2px $blue solid;
+                top: 1px;
+                color: $blue;                
+            }
+        }
+        &>a:hover{
+            border: 0;
+            background-color: transparent;
+            border-bottom: 2px #0096e1 solid;
+            top: 1px;
+            
+        }
+    }
+}
+
+// 提示框样式
+.modal-dialog-blue{
+    .modal-content{
+        overflow: hidden;
+        .modal-header{
+            text-align: center;
+            background-color: $blue;
+            color: #fff;
+        }
+    }
+}
+// form表单
+form {
+    &.form-inline{
+        .form-group{
+            label{min-width: 85px; text-align: right;}
+            margin: 0px 20px 10px 0;
+        }
+    }
+    .field{
+        padding-top: 6px;
+        min-height: 23px;
+    }
+    .file{
+        height: 25px;
+        margin-top:5px;
+    }
+}
+// 多步进度
+.step{
+    text-align: center;
+    ul{
+        li{
+            padding-left: 20px;
+            display: inline-block;
+            position: relative;
+            margin-right: 5px;
+            line-height: 40px;
+            height: 40px;
+            width: 130px;
+            background:#dadada;
+            text-align: center;
+            &:first-child{
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+                &:before{
+                    border: 0;
+                }
+            }&:last-child{
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                &:after{
+                    border: 0;
+                }
+            }
+            &:before{
+                position: absolute;
+                left: 0;
+                top:0;
+                height: 0;
+                width: 0;
+                border-bottom: 20px inset transparent;
+                border-left: 20px solid #fff;
+                border-top:20px inset transparent;
+                content: "";
+            }
+            &:after{
+                position: absolute;
+                right: -20px;
+                top:0;
+                height: 0;
+                width: 0;
+                border-bottom: 20px inset transparent;
+                border-left: 20px solid #dadada;
+                border-top:20px inset transparent;
+                content: "";
+                z-index: 2;
+            }
+        }
+        .active{
+            color: #fff;
+            background-color: $blue;
+            &:after{
+                border-left-color: $blue;
+            }
+        }
+    }
+}
+// li列表样式
+ul{
+    &.list-borderDashed li{
+        border-bottom: 1px #ccc dashed;
+        min-height: 40px;
+        line-height: 40px;
+        position: relative;
+        &:hover{
+            background-color: $tableBG;
+        }
+    }
+}
+// 浮层
+.mask{
+    //opacity: 0.5;
+    z-index: 10;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10,0.5);
+    color: #fff;
+    text-align: center;
+}
+/* 公共样式 */
+.left{float: left;}
+.right{float: right;}
+.navbarBorderR>li+li:before{
+    padding-right: 10px;
+    color:#aaa;
+    content: "|";
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    position: relative;
+}
+// 边样式
+@import "mixins/_border.scss";
+// 字体大小
+@import "mixins/_text-size.scss";
+/* 字体颜色 */
+.text-grey{
+    color:$text-grey;
+}
+.text-blue{
+    color: $text-blue;
+}
+.text-blue-deep{
+    color:$text-blue-deep;
+}
+.text-pink{
+
+}
+.text-red{
+ color: $text-red;
+}
+.text-orange{
+    color:$text-orange;
+}
+/* 背景颜色 */
+.bg-white{
+    background-color: $white;
+}
+.bg-grey{
+    background-color: #f0f0f0;
+}
+/* 小提示框 */
+.tooltip-inner{
+    background-color: #fff;
+    border: 1px #666 solid;
+    color:#333;
+}
+// 边样式
+.border-b-grey-dashed{
+    border-bottom: 1px #dadada dashed;
+}
+.border-t-grey-dashed{
+    border-top: 1px #dadada dashed;
+}
+/* 边距 */
+@import "mixins/_margin.scss";
+@import "mixins/_padding.scss";
+
+.input-sm {
+    height: 25px;
+    padding: 2px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+select.input-sm{
+    height: 25px;
+    line-height: 25px;
+}
+.btn-sm, .btn-group-sm>.btn {
+    padding: 2.5px 10px;
+}

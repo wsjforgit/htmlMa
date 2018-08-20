@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员授信管理 - 历史授信</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>会员资金管理</li>
+            <li>会员授信管理</li>
+            <li>历史授信</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">授信银行：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">计息方式：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">企业ID：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">企业名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">授信生效日：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">授信到期日：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>序号</th>
+                <th>授信银行</th>
+                <th>授信总额</th>
+                <th>授信生效日</th>
+                <th>授信到期日</th>
+                <th>占用授信额度</th>
+                <th>授信使用科目</th>
+                <th>授信使用额度</th>
+                <th>授信恢复日</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>建设银行</td>
+                    <td>10000.00元</td>
+                    <td>2017年1月1日</td>
+                    <td>2017年1月1日</td>
+                    <td>5000.00元</td>
+                    <td>仓单融资</td>
+                    <td>5000.00元</td>
+                    <td>2016年1月1日</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>农行</td>
+                    <td>10000.00元</td>
+                    <td>2017年1月1日</td>
+                    <td>2017年1月1日</td>
+                    <td>5000.00元</td>
+                    <td>订单融资</td>
+                    <td>5000.00元</td>
+                    <td>2016年1月1日</td>
+                    <td>已到期</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>建设银行</td>
+                    <td>10000.00元</td>
+                    <td>2017年1月1日</td>
+                    <td>2017年1月1日</td>
+                    <td>5000.00元</td>
+                    <td>预付款融资</td>
+                    <td>5000.00元</td>
+                    <td>2016年1月1日</td>
+                    <td>已到期</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>工商银行</td>
+                    <td>10000.00元</td>
+                    <td>2017年1月1日</td>
+                    <td>2017年1月1日</td>
+                    <td>5000.00元</td>
+                    <td>预付款融资</td>
+                    <td>5000.00元</td>
+                    <td>2016年1月1日</td>
+                    <td>已到期</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    function fun(i){
+        console.log(i);
+    }
+    $("#page").initPage(71,1,fun);
+</script>
+</html>

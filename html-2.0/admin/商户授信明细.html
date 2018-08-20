@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商户授信明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>商户账户管理</li>
+            <li>商户授信明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">授信银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>工商银行</option>
+                    <option>招商银行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>选择状态</option>
+                    <option>正常</option>
+                    <option>已到期</option>
+                    <option>已失效</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">商户名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">授信生效日：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">授信到期日：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>商户名称</th>
+                <th>授信银行</th>
+                <th>授信总额度</th>
+                <th>已分配额度</th>
+                <th>未分配额度</th>
+                <th>授信生效日</th>
+                <th>授信到期日</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>京西供应链</td>
+                    <td>建设银行</td>
+                    <td class="text-orange">500000.00</td>
+                    <td class="text-orange">200000.00</td>
+                    <td class="text-orange">300000.00</td>
+                    <td>2017年4月18日</td>
+                    <td>2018年4月18日</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>京西供应链</td>
+                    <td>招商银行</td>
+                    <td class="text-orange">500000.00</td>
+                    <td class="text-orange">100000.00</td>
+                    <td class="text-orange">400000.00</td>
+                    <td>2017年5月18日</td>
+                    <td>2018年5月18日</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>京西供应链</td>
+                    <td>工商银行</td>
+                    <td class="text-orange">500000.00</td>
+                    <td class="text-orange">200000.00</td>
+                    <td class="text-orange">300000.00</td>
+                    <td>2017年5月28日</td>
+                    <td>2018年5月28日</td>
+                    <td>正常</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addshouxin">新 增</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="addshouxin" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增商户</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">商户名称：</label>
+                            <div class="col-9">
+                                <input class="form-control"  data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">授信银行：</label>
+                            <div class="col-9">
+                                <select class="form-control"  data-validate="required:不能空！">
+                                    <option>工商银行</option>
+                                    <option>建设银行</option>
+                                    <option>招商银行</option>
+                                </select>
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">授信额度：</label>
+                            <div class="col-9">
+                                <input class="form-control"  data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">授信起始日期：</label>
+                            <div class="col-9">
+                                <input class="form-control"  data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">授信到期日期：</label>
+                            <div class="col-9">
+                                <input class="form-control"  data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="subnit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

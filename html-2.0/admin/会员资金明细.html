@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员资金明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>会员资金管理</li>
+            <li>会员资金明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">资金流水号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">会员编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">会员名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">资金科目：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">资金变动日期：</label>
+                <input class="form-control"> -
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>资金流水号</th>
+                <th>会员编号</th>
+                <th>会员名称</th>
+                <th>融资订单编号</th>
+                <th>资金科目</th>
+                <th>资金变动日期</th>
+                <th>付款方</th>
+                <th>付款方银行</th>
+                <th>收款方</th>
+                <th>收款方银行</th>
+                <th>发生金额</th>
+                <th>可用余额</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ST2016-2-4</td>
+                    <td class="text-blue">010000003</td>
+                    <td>富力铁矿石集团</td>
+                    <td class="text-blue">
+                        SXB1.1-16110901
+                    </td>
+                    <td>贷款发放</td>
+                    <td>2016-02-04 09:17:32</td>
+                    <td>工商银行</td>
+                    <td>华夏银行</td>
+                    <td>通钢</td>
+                    <td>华夏银行</td>
+                    <td class="text-orange">15,000,000.00</td>
+                    <td class="text-orange">15,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>KS2016-3-2</td>
+                    <td class="text-blue">010004823</td>
+                    <td>上海楠铮实业有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16110902
+                    </td>
+                    <td>保证金冻结</td>
+                    <td>2016-03-02 11:10:01</td>
+                    <td>通钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">15,000,000.00</td>
+                    <td class="text-orange">30,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>HT-20160822-004</td>
+                    <td class="text-blue">010004824</td>
+                    <td>安阳市飞达商贸有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16120701
+                    </td>
+                    <td>支付货款</td>
+                    <td>2016-08-22 14:45:33</td>
+                    <td>找钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">20,000,000.00</td>
+                    <td class="text-orange">50,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>YL-2016-1025</td>
+                    <td class="text-blue">010004825</td>
+                    <td>宁波鑫之大钢铁贸易有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16120702
+                    </td>
+                    <td>贷款发放</td>
+                    <td>2016-10-25 10:30:00</td>
+                    <td>工商银行</td>
+                    <td>自有资金</td>
+                    <td>六枝正鑫</td>
+                    <td>华夏银行 </td>
+                    <td class="text-orange">10,000,000.00</td>
+                    <td class="text-orange">60,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>YL-2016-1026</td>
+                    <td class="text-blue">010004826</td>
+                    <td>恒大钢铁集团</td>
+                    <td class="text-blue">
+                        SXB1.1-16120703
+                    </td>
+                    <td>贷款发放</td>
+                    <td>2016-10-26 14:45:33</td>
+                    <td>建设银行</td>
+                    <td>华夏银行</td>
+                    <td>红发矿业</td>
+                    <td>华夏银行 </td>
+                    <td class="text-orange">5,000,000.00</td>
+                    <td class="text-orange">65,000,000.00</td>
+                </tr>
+
+
+                <tr>
+                    <td>KS2016-4-23</td>
+                    <td class="text-blue">010004823</td>
+                    <td>上海楠铮实业有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-161042301
+                    </td>
+                    <td>货款发放</td>
+                    <td>2016-04-23 8:10:01</td>
+                    <td>通钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">10,000,000.00</td>
+                    <td class="text-orange">40,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>KS2016-5-23</td>
+                    <td class="text-blue">010004823</td>
+                    <td>上海楠铮实业有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-161052334
+                    </td>
+                    <td>支付货款</td>
+                    <td>2016-05-23 12:43:45</td>
+                    <td>找钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">10,000,000.00</td>
+                    <td class="text-orange">30,000,000.00</td>
+                </tr>
+                <tr>
+                    <td>YL-2016-6498</td>
+                    <td class="text-blue">010004825</td>
+                    <td>宁波鑫之大钢铁贸易有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16121673
+                    </td>
+                    <td>支付贷款</td>
+                    <td>2016-12-16 16:30:00</td>
+                    <td>招商银行</td>
+                    <td>自有资金</td>
+                    <td>六枝正鑫</td>
+                    <td>华夏银行 </td>
+                    <td class="text-orange">10,000,000.00</td>
+                    <td class="text-orange">50,000,000.00</td>
+                </tr>
+
+                <tr>
+                    <td>KS2016-8-29</td>
+                    <td class="text-blue">021000830</td>
+
+                    <td>上海益民金属材料有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16082387
+                    </td>
+                    <td>支付贷款</td>
+                    <td>2016-08-23 17:30:00</td>
+                    <td>通钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">12,000,000.00</td>
+                    <td class="text-orange">62,000,000.00</td>
+                </tr>
+                <tr>
+
+                    <td>KS2016-12-29</td>
+                    <td class="text-blue">021004831</td>
+                    <td>上海彪赢实业有限公司</td>
+                    <td class="text-blue">
+                        SXB1.1-16122917
+                    </td>
+                    <td>支付贷款</td>
+                    <td>2016-12-29 13:34:00</td>
+                    <td>通钢</td>
+                    <td>建设银行</td>
+                    <td>通钢</td>
+                    <td>建设银行 </td>
+                    <td class="text-orange">13,500,000.00</td>
+                    <td class="text-orange">46,500,000.00</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总10条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i) {
+        console.log(i);
+    }
+    $(function () {
+        $("#page").initPage(71, 1, fun);
+    })
+</script>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>交易订单维护-关联库存明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>融资订单管理</li>
+            <li>交易订单维护</li>
+            <li>关联库存明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding">
+        <p>关联库存明细</p>
+        <div class="clearfix border-b-grey-dashed">
+            <div class="form-group col-3">
+                <label>交易合同编号：</label>
+                <span>XS121312</span>
+            </div>
+            <div class="form-group col-3">
+                <label>成交日期：</label>
+                <span>XS121312</span>
+            </div>
+            <div class="form-group col-3">
+                <label>买方名称：</label>
+                <span>XS121312</span>
+            </div>
+            <div class="form-group col-3">
+                <label>卖方名称：</label>
+                <span>XS121312</span>
+            </div>
+            <div class="form-group col-3">
+                <label>货物重量：</label>
+                <span>5998,00吨</span>
+            </div>
+            <div class="form-group col-3">
+                <label>货物单价：</label>
+                <span>1000元</span>
+            </div>
+            <div class="form-group col-3">
+                <label>合同总值：</label>
+                <span>10,000,00元</span>
+            </div>
+        </div>
+        <div class="border-b-grey-dashed">
+            <p>交易合同管理仓单</p>
+            <form class="form-inline">
+                <div class="form-group">
+                    <label>仓单编号：</label>
+                    <select class="form-control">
+                        <option>全都</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>仓库名称：</label>
+                    <input class="form-control">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-sm border-blue">查询</button>
+                </div>
+            </form>
+        </div>
+        <p>库存明细</p>
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>明细号</th>
+                <th>品名</th>
+                <th>明细总量</th>
+                <th>明细库存量</th>
+                <th>牌号</th>
+                <th>规格</th>
+                <th>产地</th>
+                <th>库位</th>
+                <th>库区</th>
+                <th>区域</th>
+                <th>位置号</th>
+                <th>可提重量</th>
+                <th>冻结重量</th>
+                <th>占用</th>
+                <th>质押重量</th>
+                <th>直发重量</th>
+                <th>状态</th>
+                <th>关联吨数</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">Q-123</td>
+                    <td rowspan="3">热轧卷</td>
+                    <td rowspan="3">59.17吨</td>
+                    <td>29.54吨</td>
+                    <td>77H05605200</td>
+                    <td>5.75*1500</td>
+                    <td>长春</td>
+                    <td>B4-2-5</td>
+                    <td>B4</td>
+                    <td>2-5</td>
+                    <td>5</td>
+                    <td>23.24吨</td>
+                    <td>00.00吨</td>
+                    <td>1.20吨</td>
+                    <td>5.00吨</td>
+                    <td>00.00吨</td>
+                    <td>正常</td>
+                    <td><input class="form-control"></td>
+                </tr>
+                <tr>
+                    <td>29.63吨</td>
+                    <td>77H05605300</td>
+                    <td>5.75*1500</td>
+                    <td>长春</td>
+                    <td>B4-2-8</td>
+                    <td>B4</td>
+                    <td>2-8</td>
+                    <td>8</td>
+                    <td>16.43吨</td>
+                    <td>00.00吨</td>
+                    <td>13.20吨</td>
+                    <td>00.00吨</td>
+                    <td>00.00</td>
+                    <td>正常</td>
+                    <td><input class="form-control"></td>
+                </tr>
+              
+            </tbody>
+        </table>
+        <div class="text-center margin-t-lg"><button class="btn border-blue" onclick="checked()">确认关联</button></div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function checked(){
+        window.location.href='交易订单维护.html';
+    }
+</script>
+</html>

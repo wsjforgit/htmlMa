@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>仓储管理</li>
+            <li>库存管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">仓库名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">仓单编号：</label>
+                <input class="form-control">
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">库存：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                </select>
+            </div> -->
+            <div class="form-group">
+                <label class="control-label">会员编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">会员名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>会员编号</th>
+                <th>会员名称</th>
+                <th>仓库编号</th>
+                <th>仓库名称</th>
+                <th>库存编号</th>
+                <th>库存总重量</th>
+                <th>可提重量</th>
+                <th>冻结重量</th>
+                <th>占用</th>
+                <th>质押重量</th>
+                <th>直发重量</th>
+                <th>库存状态</th>
+                <th>查看</th>
+
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">
+                        <input type="checkbox">
+                    </td>
+                    <td rowspan="3" class="text-blue">01000003</td>
+                    <td rowspan="3">通钢</td>
+                    <td rowspan="3" class="text-blue">JCK90012221</td>
+                    <td rowspan="3">长春通钢仓储</td>
+                    <td class="text-blue">NO1234</td>
+                    <td>100吨</td>
+                    <td>100吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="库存管理-明细.html">明细</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-blue">NO1235</td>
+                    <td>100吨</td>
+                    <td>90吨</td>
+                    <td>10吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="库存管理-明细.html">明细</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-blue">NO1236</td>
+                    <td>100吨</td>
+                    <td>80吨</td>
+                    <td>20吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="库存管理-明细.html">明细</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" style="min-width: 100px;" >新增库存</button>
+            <button class="btn border-blue" style="min-width: 100px;" >添加库存编号</button>
+        </div>
+    </div>
+    <!-- 新增库存提示框 -->
+    <div id="addkucun" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增库存</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">会员编号：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">会员名称：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">仓库编号：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">仓库名称：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 添加库存编号提示框 -->
+    <div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">添加库存编号</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <input class="hidden" value="">
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">会员编号：</label><span>xxxxxxxxxxxx</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">会员名称：</label><span>xxxxxxxxxxxx</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">仓库编号：</label><span>xxxxxxxxxxxx</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">仓库名称：</label><span>xxxxxxxxxxxx</span></div>
+                        <div class="col-6 padding-xs form-group">
+                            <label class="control-label col-5">库存编号：</label>
+                            <div class="col-7">
+                                <input class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i) {
+        console.log(i);
+    }
+    $(function () {
+        $("#page").initPage(71, 1, fun);
+    })
+</script>
+
+</html>

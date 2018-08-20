@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监管方质押审核</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>监管方管理</li>
+            <li>监管方质押审核</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">仓单编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">出质人：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">质权人：</label>
+                <select class="form-control">
+                        <option>请选择</option>
+                    </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">监管方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">审核状态：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">发起时间：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>仓单编号</th>
+                <th>出质人</th>
+                <th>质权人</th>
+                <th>监管方名称</th>
+                <th>发起时间</th>
+                <th>审核状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="1">
+                    </td>
+                    <td class="text-blue">YL-2017-0125</td>
+                    <td>张宇</td>
+                    <td>华夏银行</td>
+                    <td>锦程物流</td>
+                    <td>2017-09-26</td>
+                    <td>已审核</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="1">
+                    </td>
+                    <td class="text-blue">YL-2017-0126</td>
+                    <td>孟凡强</td>
+                    <td>华夏银行</td>
+                    <td>锦程物流</td>
+                    <td>2017-11-20</td>
+                    <td>未审核</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="1">
+                    </td>
+                    <td class="text-blue">YL-2017-0127</td>
+                    <td>曲阳</td>
+                    <td>华夏银行</td>
+                    <td>锦程物流</td>
+                    <td>2017-11-29</td>
+                    <td>已审核</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-agree="1">通 过</button>
+            <button class="btn border-orange" data-disagree="1">驳 回</button>
+        </div>
+    </div>
+<!-- 提示框 -->
+<div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">驳回原因</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="hidden" value="">
+                    <textarea style="width: 100%;height: 60px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn border-blue">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

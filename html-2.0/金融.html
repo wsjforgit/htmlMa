@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>金融</title>
+    <link href="css/bootstrap.min.css?v=1" rel="stylesheet">
+    <link href="css/index.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .banner {
+            position: relative;
+        }
+        .container{
+            width: 1280px;
+        }
+        .banner .login {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: rgba(25, 25, 25, 0.5);
+            height: 100%;
+            width: 300px;
+        }
+        .tab-pane{
+            height: 360px;
+            margin-bottom: 100px;
+            background-color: #1b53c2;
+            box-shadow: 0px 8px 10px 0px #999;
+        }
+        .tab-pane>div:first-child{
+            width: 360px;
+            height: 360px;
+            float: left;
+            margin-left: 40px;
+            position: relative;
+        }
+        .tab-pane>div+div{
+            width: 840px;
+            float: left;
+            margin-left: 20px;
+            padding-top: 80px;
+        }
+        .tab-pane>div:first-child img{
+            position: absolute;
+            top:58px;
+            box-shadow: 0px 5px 10px 0 #333;
+        }
+        .tab-pane.active>div:first-child img{
+            animation: tab-pane-img 1s;
+            -moz-animation: tab-pane-img 1s;	/* Firefox */
+            -webkit-animation: tab-pane-img 1s;	/* Safari 和 Chrome */
+            -o-animation: tab-pane-img 1s;	/* Opera */
+        }
+        @keyframes tab-pane-img
+        {
+        from {top: 0;}
+        to {top: 58px;}
+        }
+        .c2{
+            width: 1280px;
+            height: 513px;
+            background: url(image/jinrong/bg-1.png) no-repeat;
+        }
+        .c2>div{
+            height: 285px;
+            margin-top: 110px;
+        }
+        .c2 div .col-xs-3{
+            position: relative;
+        }
+        .c2 div .cc:hover,.c2 div:hover .cc{
+            top:50%;
+            left:45%;
+            bottom: 50%;
+            right: 45%;
+            border-radius: 50%;
+        }
+        .c2 .cc{
+            margin-left: 15px;
+            margin-right: 20px;
+            position: absolute;
+            top:0;
+            left:0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: top .5s,left .5s,bottom .5s,right .5s,border-radius 0.1s;
+            -moz-transition: top 1s,left 1s,bottom 1s,right 1s,border-radius 0.2s;	/* Firefox 4 */
+            -webkit-transition: top .5s,left .5s,bottom .5s,right .5s,border-radius 0.1s;	/* Safari 和 Chrome */
+            -o-transition: top 1s,left 1s,bottom 1s,right 1s,border-radius 0.2s;
+        }
+        .nav-tabs>li{
+            width: 25%;
+        }
+        .nav-tabs>li.active{
+            box-shadow: -1px -13px 0px -1px #1b53c2;
+            z-index: 10;
+        }
+        .nav>li>a:hover, .nav>li>a:focus{
+            border: 1px #1b53c2 solid;
+            background-color: #1b53c2;
+        }
+        .nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+            color:#fff;
+            cursor: default;
+            border: 1px #1b53c2 solid;;
+            border-bottom-color: transparent;
+            background-color: #1b53c2;
+        }
+
+        .nav-tabs>li>a {
+            color:#fff;
+            margin-right: 2px;
+            line-height: 1.42857143;
+            border: 1px solid transparent;
+            border-radius: 0;
+            background-color: #82a1de;
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .hd span{
+            display: block;
+            height: 40px;
+            width: 20px;
+            cursor: pointer;
+        }
+        .hd .next{
+            background: url('image/icom_left.png') no-repeat center;
+            position: absolute;
+            right:0;
+            top:20px;
+            z-index: 10;
+        }
+        .hd .prev{
+            background: url('image/icom_right.png') no-repeat center;
+            position: absolute;
+            left:0;
+            top:20px;
+            z-index: 10;
+        }
+        .foots_nav{
+            color: #ddd;
+        }
+        .foots_nav a{
+            color: #7a7a7a;
+        }
+        .foots_nav a:hover{
+            color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hender-top">
+                <span>您好！京西供应链欢迎您</span>
+                <ul class="list-inline navbar-right navbarBorderR right">
+                    <li>
+                         <a href="http://www.westscm.com/home.do" target="_blak">返回京西供应链首页</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/login!showLogin.do" target="_blak">资产会员中心</a>
+                    </li>
+                    <li>
+                        <a href="会员中心.html">融资会员中心</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/siteImsNews!newsintro.do?code=20" target="_blak">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/login!showLogin.do" target="_blak">登录/注册</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hender">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <img src="image/logo.png" style="height: 51px;">
+                        </div>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.westscm.com/home.do">首页</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/supplyIndex.do">资产</a>
+                            </li>
+                            <li class="active">
+                                <a href="金融.html">金融</a>
+                            </li>
+                            <!-- <li>
+                                <a href="物流.html">物流</a>
+                            </li> -->
+                            <li>
+                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do">资讯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="banner margin-b row">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <a href="#">
+                            <img src="image/banner/jinrong-banner1.png">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="image/banner/jinrong-banner2.jpg">
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="#">
+                            <img src="image/banner/jinrong-banner3.jpg">
+                        </a>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="icon icon-prev" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="icon icon-next" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- <div class="login">
+                <div style="margin-top:45px;margin-left:20px;background-color: #ccc;height: 240px; width: 260px;">
+                </div>
+            </div> -->
+        </div>
+        <!-- 第一层 -->
+        <div class="margin-b bg-white row">
+            <div class="text-center padding-lg">
+                <p class="h3"><strong>银企在线+供应链金融</strong></p>
+                <p class="text-grey">Bank Enterprise Online + supply chain finance </p>
+            </div>
+            <div style="height: 480px;">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs text-center" role="tablist">
+                    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">应付账款融资</a></li>
+                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">预付款融资</a></li>
+                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">存货融资</a></li>
+                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">订单融资</a></li>
+                </ul>
+                
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane clearfix active" id="home">
+                        <div>
+                            <img src="image/jinrong/img-1.jpg">
+                        </div>
+                        <div>
+                            <img src="image/jinrong/img-yingfu.png">
+                            <div class="text-right margin-lg">
+                                    <a href="#" class="btn border-white">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane clearfix" id="profile">
+                        <div>
+                            <img src="image/jinrong/img-2.jpg">
+                        </div>
+                        <div>
+                            <img src="image/jinrong/img-yufukuan.png">
+                            <div class="text-right margin-lg">
+                                    <a href="#" class="btn border-white">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane clearfix" id="messages">
+                        <div>
+                            <img src="image/jinrong/img-3.jpg">
+                        </div>
+                        <div>
+                            <img src="image/jinrong/img-cunhuo.png">
+                            <div class="text-right margin-lg">
+                                    <a href="#" class="btn border-white">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane clearfix" id="settings">
+                        <div>
+                            <img src="image/jinrong/img-4.jpg">
+                        </div>
+                        <div>
+                            <img src="image/jinrong/img-dingdan.png">
+                            <div class="text-right margin-lg">
+                                    <a href="#" class="btn border-white">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 二层 -->
+        <div class="margin-b bg-white row">
+            <div class="text-center padding-lg">
+                <p class="h3"><strong>风险管理</strong></p>
+                <p class="text-grey">risk management</p>
+            </div>
+            <div class="c2 clearfix">
+                <div class="col-xs-3">
+                    <img src="image/jinrong/bg-2.png">
+                    <div class="cc"></div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="image/jinrong/bg-3.png">
+                    <div class="cc"></div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="image/jinrong/bg-4.png">
+                    <div class="cc"></div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="image/jinrong/bg-5.png">
+                    <div class="cc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 友情链接 -->
+        <p class="margin-b-sm margin-t-sm row h4">友情链接</p>
+        <div  id="friendlink" class="bg-white row" style="height: 120px;">
+            <div style="height: 80px; line-height: 80px; margin:20px 0;position: relative;">
+                <div style="height: 80px; line-height: 80px;position: relative;overflow: hidden">
+                    <ul class="list-unstyled text-center" style="height: 80px;position:absolute;">
+                        <li style="float: left;width: 390px;border-right: 1px #ddd solid;"><img src="image/CMBC.png"></li>
+                        <li style="float: left;width: 390px;border-right: 1px #ddd solid;"><img src="image/CMB.png"></li>
+                        <li style="float: left;width: 390px;border-right: 1px #ddd solid;"><img src="image/HXB.png"></li>
+                        <li style="float: left;width: 390px;border-right: 1px #ddd solid;"><img src="image/SDB.png"></li>
+                    </ul>
+                </div>
+                <div class="hd">
+                    <span class="next"></span>
+                    <span class="prev"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="width: 100%;background-color: #252525;">
+        <div class="container">
+            <div class="padding row foots_nav">
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">新手上路</p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=4" target="_blak">会员注册/登录</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=96" target="_blak">如何成为认证会员</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=121" target="_blak">如何成为融资会员</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=15" target="_blak">会员等级及服务范围</a></p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">交易指南</p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=128" target="_blak">如何发布供应</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=129" target="_blak">如何发布需求</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=9" target="_blak">如何签订合同</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=10" target="_blak">交易流程</a></p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">常见问题</p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=127" target="_blak">忘记密码</a></p>
+                </div>
+                <div class="col-sm-3 col-xs-3">
+                    <p class="h5">关于我们</p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=123" target="_blak">企业介绍</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=124" target="_blak">战略布局</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=125" target="_blak">在线客服</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=126" target="_blak">联系我们</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <span>Copyright 2017-2018 All Rights Reserved 版权所有：京西供应链 | 资产交易平台</span>
+        </div>
+    </div>
+</body>
+<script>
+    $(function () {
+        jQuery("#friendlink").slide({mainCell:"ul",autoPlay:true,effect:"leftMarquee",vis:4,interTime:50});
+    })
+    
+</script>
+
+</html>

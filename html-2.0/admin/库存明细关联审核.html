@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存明细关联审核</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>融资订单管理</li>
+            <li>库存明细关联审核</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">交易合同编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">买方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">卖方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">关联明细：</label>
+                <select class="form-control">
+                    <option>请选择仓单关联</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">成交日期：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div> -->
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>交易合同编号</th>
+                <th>买方名称</th>
+                <th>卖方名称</th>
+                <th>货物总量（吨）</th>
+                <th>货物单价</th>
+                <th>合同总值</th>
+                <th>关联明细</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">SXB1.1-TJ-1703-02</td>
+                    <td>通钢</td>
+                    <td>六枝正鑫</td>
+                    <td>9,948.00</td>
+                    <td class="text-orange">2915.15元</td>
+                    <td class="text-orange">29,000,000</td>
+                    <td>YL-2014-0125</td>
+                    <td>待审核</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">SXB1.1-TJ-1703-03</td>
+                    <td>通钢</td>
+                    <td>大安灰石场</td>
+                    <td>5,038.00吨</td>
+                    <td class="text-orange">3,009.30元</td>
+                    <td class="text-orange">15,160,902.00</td>
+                    <td>YL-2014-0126</td>
+                    <td>已驳回</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201701-SH2454</td>
+                    <td>通钢</td>
+                    <td>浙江工业</td>
+                    <td>39,970吨</td>
+                    <td class="text-orange">3,078.41元</td>
+                    <td class="text-orange">123,044,150.00</td>
+                    <td>KS2016-3-5</td>
+                    <td>已通过</td>
+                </tr>
+				  <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201703-DB6449</td>
+                    <td>水钢</td>
+                    <td>红发矿业</td>
+                    <td>5,000.00</td>
+                    <td class="text-orange">4341.00</td>
+                    <td class="text-orange">21,705,000.00</td>
+                    <td>ST2016-2-4</td>
+                    <td>已关联</td>
+                </tr>
+				     <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201703-QZ5436</td>
+                    <td>通钢</td>
+                    <td>浙江工业</td>
+                    <td>16,970.00</td>
+                    <td class="text-orange">3212.00</td>
+                    <td class="text-orange">54,507,640.00</td>
+                    <td>YL2016-05-25</td>
+                    <td>已关联</td>
+                </tr>
+				     <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201702-SH2508</td>
+                    <td>通钢</td>
+                    <td>浙江工业</td>
+                    <td>22,421.00</td>
+                    <td class="text-orange">2631.19</td>
+                    <td class="text-orange">58,993,911.00</td>
+                    <td>YL2016-4-15</td>
+                    <td>已关联</td>
+                </tr>     <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201704-LC5220</td>
+                    <td>通钢</td>
+                    <td>宏源建材</td>
+                    <td>2,697.00</td>
+                    <td class="text-orange">4021.00</td>
+                    <td class="text-orange">10,844,367.00</td>
+                    <td>YL2016-4-5</td>
+                    <td>已关联</td>
+                </tr>     <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201704-SH5049</td>
+                    <td>通钢</td>
+                    <td>山东阔嘉</td>
+                    <td>22,670.00</td>
+                    <td class="text-orange">2945.41</td>
+                    <td class="text-orange">66,772,444.70</td>
+                    <td>YL2016-3-5</td>
+                    <td>已关联</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-agree="1">通 过</button>
+            <button class="btn border-orange" data-disagree="1">驳 回</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">驳回原因</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input class="hidden" value="">
+                        <textarea style="width: 100%;height: 60px;"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn border-grey" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn border-blue">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

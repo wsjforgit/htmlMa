@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>货权转移管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>货权转移管理</li>
+            <li>货权转移管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">融资订单编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">买方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款银行：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">业务类型：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">仓单编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">卖方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>买方名称</th>
+                <th>卖方名称</th>
+                <th>业务类型</th>
+                <th>融资订单编号</th>
+                <th>贷款编号</th>
+                <th>贷款银行</th>
+                <th>仓库名称</th>
+                <th>仓单编号</th>
+                <th>应货权转移量</th>
+                <th>已货权转移量</th>
+                <th>未货权转移量</th>
+                <th>当前状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-16120702</td>
+                    <td class="text-blue">HT-20160822-004</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>FG-2017-1-6</td>
+                    <td>9,948吨</td>
+                    <td>0吨</td>
+                    <td>9,948吨</td>
+                    <td>待货权转移</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>订单融资</td>
+                    <td class="text-blue">SXB1.1-16120703</td>
+                    <td class="text-blue">YL-2014-0125</td>
+                    <td>建设银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-2-5</td>
+                    <td>55,038.00吨</td>
+                    <td>55,038.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-16120705</td>
+                    <td class="text-blue">YL-2014-0126</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2016-2-5</td>
+                    <td>50,023.00吨</td>
+                    <td>2,689.00吨</td>
+                    <td>47,334.00吨</td>
+                    <td>已部分货权转移</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-070205</td>
+                    <td class="text-blue">YL-2015-0205</td>
+                    <td>建设银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-2-5</td>
+                    <td>50,123.00吨</td>
+                    <td>1,689.00吨</td>
+                    <td>48,434.00吨</td>
+                    <td>已部分货权转移</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-170320</td>
+                    <td class="text-blue">YL-2014-0320</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-03-20</td>
+                    <td>50,023.00吨</td>
+                    <td>26,890.00吨</td>
+                    <td>23,133.00吨</td>
+                    <td>已部分货权转移</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>订单融资</td>
+                    <td class="text-blue">SXB1.1-170505</td>
+                    <td class="text-blue">YL-2017-0420</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-0505</td>
+                    <td>50,023.00吨</td>
+                    <td>50,023.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+					<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-16120703</td>
+                    <td class="text-blue">YL-2017-0908</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-0703</td>
+                    <td>43,545.00吨</td>
+                    <td>43,545.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>订单融资</td>
+                    <td class="text-blue">SXB1.1-16110902</td>
+                    <td class="text-blue">YL-2017-0520</td>
+                    <td>建设银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-0520</td>
+                    <td>50,023.00吨</td>
+                    <td>50,023.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-16120707</td>
+                    <td class="text-blue">YL-2017-0505</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-0505</td>
+                    <td>50,023.00吨</td>
+                    <td>50,023.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox" value="3">
+                    </td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td>预付款融资</td>
+                    <td class="text-blue">SXB1.1-16120702</td>
+                    <td class="text-blue">YL-2017-0703</td>
+                    <td>华夏银行</td>
+                    <td>东方库</td>
+                    <td>KS2017-0703</td>
+                    <td>45,023.00吨</td>
+                    <td>45,023.00吨</td>
+                    <td>0吨</td>
+                    <td>货权转移完成</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总10条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addshanghu">货权转移</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="addshanghu" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog  modal-lg">
+            <form class="form-horizontal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">货权转移</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix">
+                            <div class="col-3 padding-sm">东方库</div>
+                            <div class="col-3 padding-sm">卖方名称：通钢</div>
+                            <div class="col-3 padding-sm">应转移量：55.038吨</div>
+                            <div class="col-3 padding-sm">待转移量：170,488.00吨</div>
+                            <div class="col-3 padding-sm">货权转移单号：GH12000000</div>
+                            <div class="col-3 padding-sm">买方名称：找钢</div>
+                            <div class="col-3 padding-sm">已转移量：37.55吨</div>
+                        </div>
+                        <div class="margin-sm">
+                            <label class="margin-r">
+                                    <input type="radio" name="fa" data-validate="radio:请选择！">直发
+                            </label>
+                            <label class="margin-r">
+                                    <input type="radio" name="fa" data-validate="radio:请选择！">非直发
+                            </label>
+                            <label class="field text-red"></label>
+                        </div>
+                        <div class="margin-sm">
+                            <table class="table table-bordered table-center">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">编号</th>
+                                        <th rowspan="2">品名</th>
+                                        <th rowspan="2">牌号</th>
+                                        <th rowspan="2">规格</th>
+                                        <th rowspan="2">产地</th>
+                                        <th rowspan="2">位置号</th>
+                                        <th rowspan="2">捆包号</th>
+                                        <th colspan="2">转移量</th>
+                                        <th rowspan="2">原货位</th>
+                                        <th rowspan="2">新货位</th>
+                                    </tr>
+                                    <tr>
+                                        <th>质押量</th>
+                                        <th>直发量</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>热轧卷</td>
+                                        <td>热轧卷 </td>
+                                        <td>5.75*1500</td>
+                                        <td>长春</td>
+                                        <td>2-8</td>
+                                        <td>8</td>
+                                        <td><input style="width: 60px;" data-validate="required:不能空！"></td>
+                                        <td><input style="width: 60px;" data-validate="required:不能空！"></td>
+                                        <td>D4-2-8</td>
+                                        <td><input style="width: 60px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>冷轧卷</td>
+                                        <td>冷轧卷 </td>
+                                        <td>7.75*1500</td>
+                                        <td>长春</td>
+                                        <td>7-1</td>
+                                        <td>1</td>
+                                        <td><input style="width: 60px;"></td>
+                                        <td><input style="width: 60px;"></td>
+                                        <td>C3-7-1</td>
+                                        <td><input style="width: 60px;"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">备注</td>
+                                        <td colspan="10">
+                                            <textarea style="height: 60px; width: 100%;"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">提交</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

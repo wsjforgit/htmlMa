@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>融资订单管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>融资订单管理</li>
+            <li>融资订单管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">融资订单编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">交易合同编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>建设银行</option>
+                    <option>工商银行</option>
+                    <option>招商银行</option>
+                    
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">买方名称：</label>
+                <input class="form-control">
+            </div> 
+            <div class="form-group">
+                <label class="control-label">卖方名称：</label>
+                <input class="form-control">
+            </div>  
+            <div class="form-group">
+                <label class="control-label">业务类型：</label>
+                <select class="form-control">
+                    <option>选择业务类型</option>
+                    <option>预付款融资</option>
+                    <option>保理融资</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">融资订单生效日：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款到期日：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>选择状态</option>
+                    <option>正常</option>
+                    <option>负债</option>
+                </select>
+            </div>         
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>业务类型</th>
+                <th>融资订单编号</th>
+                <th>贷款编号</th>
+                <th style="width: 80px;">贷款银行</th>
+                <th>仓单编号</th>
+                <th>交易合同编号</th>
+                <th>买方名称</th>
+                <th>卖方名称</th>
+				<th>贷款金额</th>
+                <th>保证金金额</th>
+                <th>融资订单生效日</th>
+                <th>贷款到期日</th>
+                <th>当前状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20170609-YFK</td>
+                    <td class="text-blue">XHD-20170609-DB3575</td>
+                    <td>工商银行</td>
+                    <td>CD-JXGYL-I-20170609</td>
+                    <td>RS2017-0609</td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td class="text-orange">112,008.00</td>
+                    <td class="text-orange">89,606.40</td>
+                    <td>2017-06-09</td>
+                    <td>2017-09-10</td>
+                    <td>待收货质押</td>
+                </tr>
+                <tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20170921-YFK</td>
+                    <td class="text-blue">XHD-20170921-DB3557</td>
+                    <td>建设银行</td>
+                    <td>CD-JXGYL-I-20170921</td>
+                    <td>LS-2017-0921</td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td class="text-orange">116,649.00</td>
+                    <td class="text-orange">93,319.20</td>
+                    <td>2017-09-21</td>
+                    <td>2017-12-21</td>
+                    <td>待网银确认</td>
+                </tr>
+                <tr>
+                    <td>保理融资</td>
+                    <td class="text-blue">TG-ZGW-20170816-CHRZ</td>
+                    <td class="text-blue">XHD-20170816-SXB8.16</td>
+                    <td>工商银行</td>
+                    <td>CD-JXGYL-I-20170816</td>
+                    <td>KS-2017-0816</td>
+                    <td>水钢</td>
+                    <td>六枝正鑫</td>
+                    <td class="text-orange">115,167.00</td>
+                    <td class="text-orange">92,133.60</td>
+                    <td>2017-08-16</td>
+                    <td>2017-11-17</td>
+                    <td>已支付货款</td>
+                </tr>
+				 <tr>
+                    <td>保理融资</td>
+                    <td class="text-blue">TG-ZGW-20171113-CHRZ</td>
+                    <td class="text-blue">XHD-20171113-SXB11-13</td>
+                    <td>工商银行</td>
+                    <td>CD-JXGYL-I-20171113</td>
+                    <td>KS-2017-1113</td>
+                    <td>大安灰石厂</td>
+                    <td>通钢</td>
+                    <td class="text-orange">115,752.00</td>
+                    <td class="text-orange">92,601.60</td>
+                    <td>2017-11-13</td>
+                    <td>2018-02-14</td>
+                    <td>已支付货款</td>
+                </tr>
+				<tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20170317-YFK</td>
+                    <td class="text-blue">XHD-20170317-DB3577</td>
+                    <td>建设银行</td>
+                    <td>CD-JXGYL-I-20170317</td>
+                    <td>LS-2017-0317</td>
+                    <td>找钢</td>
+                    <td>通钢</td>
+                    <td class="text-orange">116,649.00</td>
+                    <td class="text-orange">93,319.20</td>
+                    <td>2017-03-17</td>
+                    <td>2017-06-18</td>
+                    <td>待网银确认</td>
+                </tr>
+				 <tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20170226-CHRZ</td>
+                    <td class="text-blue">XHD-20170226-SXB2-26</td>
+                    <td>建设银行</td>
+                    <td>CD-JXGYL-I-20170226</td>
+                    <td>KS-2017-0226</td>
+                    <td>水钢</td>
+                    <td>红发矿业</td>
+                    <td class="text-orange">115,674.00</td>
+                    <td class="text-orange">92,593.60</td>
+                    <td>2017-02-26</td>
+                    <td>2017-05-27</td>
+                    <td>已支付货款</td>
+                </tr>
+				<tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20170210-YFK</td>
+                    <td class="text-blue">XHD-20170210-SXB2-10</td>
+                    <td>招商银行</td>
+                    <td>CD-JXGYL-I-20170210</td>
+                    <td>KS-2017-0210</td>
+                    <td>水钢</td>
+                    <td>宏源建材</td>
+                    <td class="text-orange">130,674.00</td>
+                    <td class="text-orange">92,593.60</td>
+                    <td>2017-02-10</td>
+                    <td>2017-05-11</td>
+                    <td>已支付货款</td>
+                </tr>
+								 <tr>
+                    <td>保理融资</td>
+                    <td class="text-blue">TG-ZGW-20170129-BLRZ</td>
+                    <td class="text-blue">XHD-20170129-SXB1-29</td>
+                    <td>招商银行</td>
+                    <td>CD-JXGYL-I-20170129</td>
+                    <td>KS-2017-0129</td>
+                    <td>水钢</td>
+                    <td>山东阔嘉</td>
+                    <td class="text-orange">170,556.00</td>
+                    <td class="text-orange">10,593.60</td>
+                    <td>2017-01-29</td>
+                    <td>2017-04-30</td>
+                    <td>已支付货款</td>
+                </tr>
+				<tr>
+                    <td>预付款融资</td>
+                    <td class="text-blue">TG-ZGW-20161225-YKFRZ</td>
+                    <td class="text-blue">XHD-20161225-SXB12-25</td>
+                    <td>建设银行</td>
+                    <td>CD-JXGYL-I-20161225</td>
+                    <td>KS-2017-1225</td>
+                    <td>水钢</td>
+                    <td>六枝正鑫</td>
+                    <td class="text-orange">120,674.00</td>
+                    <td class="text-orange">91,463.60</td>
+                    <td>2016-12-25</td>
+                    <td>2017-03-26</td>
+                    <td>已支付货款</td>
+                </tr>
+								 <tr>
+                    <td>保理融资</td>
+                    <td class="text-blue">TG-ZGW-20161115-BLRZ</td>
+                    <td class="text-blue">XHD-20161115-SXB11-15</td>
+                    <td>建设银行</td>
+                    <td>CD-JXGYL-I-20161115</td>
+                    <td>KS-2016-1115</td>
+                    <td>水钢</td>
+                    <td>大安灰石厂</td>
+                    <td class="text-orange">221,654.00</td>
+                    <td class="text-orange">99,732.00</td>
+                    <td>2016-11-15</td>
+                    <td>2017-01-16</td>
+                    <td>已支付货款</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总10条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

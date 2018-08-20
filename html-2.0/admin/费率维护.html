@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>费率维护</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>监管方管理</li>
+            <li>费率维护</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">费用名称：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">收取方式：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>费用名称</th>
+                <th>收取方式</th>
+                <th>收取金额</th>
+                <th>收费标准</th>
+                <th>收费对象</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+					<td><input name="choosed" type="checkbox"/></td>
+					<td>手续费</td>
+					<td>比例</td>
+					<td class="text-orange">10%</td>
+					<td>全部</td>
+					<td>已生效</td>
+				</tr>
+				<tr>
+					<td><input name="choosed" type="checkbox"/></td>
+					<td>服务费</td>
+					<td>定量</td>
+					<td class="text-orange">10元</td>
+					<td>首钢系</td>
+					<td>待审核</td>
+				</tr>
+				<tr>
+					<td><input name="choosed" type="checkbox"/></td>
+					<td>监管费</td>
+					<td>定量</td>
+					<td class="text-orange">10元</td>
+					<td>首钢系</td>
+					<td>待审核</td>
+				</tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addshanghu">新 增</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="addshanghu" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <form class="form-horizontal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增监管方</h4>
+                    </div>
+                    <div class="modal-body">
+                        <input class="hidden">
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">费用名称：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">收取方式：</label>
+                            <div class="col-8 field">
+                                <label class="col-4">
+                                    <input id="radio1" type="radio" name="sqfs" data-validate="radio:请选择！">
+                                    比例
+                                </label>
+                                <label class="col-4">
+                                    <input id="radio2" type="radio" name="sqfs" data-validate="radio:请选择！">
+                                    定量
+                                </label>
+                                <div class="col-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">收取金额：</label>
+                            <div class="col-8">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">收费对象：</label>
+                            <div class="col-8">
+                                <div class="col-4">
+                                    <input id="radio3" type="radio" name="sfdx" data-validate="radio:请选择！">
+                                    <label for="radio3">全部</label>
+                                </div>
+                                <div class="col-4">
+                                    <input id="radio4" type="radio" name="sfdx" data-validate="radio:请选择！">
+                                    <label for="radio4">会员组</label>
+                                </div>
+                                <div class="col-4 field text-red"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- 提示框 修改 -->
+    <div id="editshanghu" class="modal fade in" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <form class="form-horizontal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">修改监管方</h4>
+                        </div>
+                        <div class="modal-body">
+                            <input class="hidden" name="id">
+                            <div class="form-group clearfix">
+                                <label class="control-label col-3">费用名称：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-3 field text-red"></div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-3">收取方式：</label>
+                                <div class="col-8 field">
+                                    <label class="col-4">
+                                        <input type="radio" name="sqfs" data-validate="radio:请选择！">
+                                        比例
+                                    </label>
+                                    <label class="col-4">
+                                        <input type="radio" name="sqfs" data-validate="radio:请选择！">
+                                        定量
+                                    </label>
+                                    <div class="col-4 field text-red"></div>
+                                </div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-3">收取金额：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-3 field text-red"></div>
+                            </div>
+                            <div class="form-group clearfix">
+                                <label class="control-label col-3">收费对象：</label>
+                                <div class="col-8">
+                                    <div class="col-4">
+                                        <label>
+                                            <input type="radio" name="sfdx" data-validate="radio:请选择！">全部
+                                        </label>
+                                    </div>
+                                    <div class="col-4">
+                                        <label>
+                                            <input type="radio" name="sfdx" data-validate="radio:请选择！">会员组
+                                        </label>
+                                    </div>
+                                    <div class="col-4 field text-red"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn border-blue">保存</button>
+                            <button class="btn border-grey" data-dismiss="modal">返回</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

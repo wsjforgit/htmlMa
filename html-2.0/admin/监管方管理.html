@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监管方管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>监管方管理</li>
+            <li>监管方管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">监管方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">组织机构代码：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>监管方名称</th>
+                <th>组织机构代码</th>
+                <th>联系人</th>
+                <th>电话</th>
+                <th>手机</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>锦程物流</td>
+                    <td>525245-X</td>
+                    <td>李宏杰</td>
+                    <td>011-234526</td>
+                    <td>15025263781</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addshanghu">新 增</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="addshanghu" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增监管方</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">监管方名称：</label>
+                            <div class="col-9">
+                                    <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">组织机构代码：</label>
+                            <div class="col-9">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">联系人：</label>
+                            <div class="col-9">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">电话：</label>
+                            <div class="col-9">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                        <div class="form-group clearfix">
+                            <label class="control-label col-3">手机：</label>
+                            <div class="col-9">
+                                <input class="form-control" data-validate="required:不能空！">
+                            </div>
+                            <div class="col-8 col-offset-3 field text-red"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>管理后台</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<div class="navbar-container">
+    <img src="image/logo.png">
+    <ul class="list-unstyled right text-center">
+        <li><a href="#"><i class="icon icon-user3 text-md"></i><br>超级管理员</a></li>
+        <li><a href="#"><i class="icon icon-user1 text-md"></i><br>超级管理角色</a></li>
+        <li><a href="#"><i class="icon icon-pasw text-md"></i><br>修改密码</a></li>
+        <li><a href="#"><i class="icon icon-exit text-md"></i><br>退出</a></li>
+    </ul>
+</div>
+<div class="main-container">
+    <div class="sidebar">
+        <div class="leftMenu">
+                <p>京西供应链</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <p class="jian">
+                            <i class="icon  icon-user2"></i>会员权限管理</p>
+                        <ul class="list-unstyled">
+                            <li  class="active">
+                                <a href="会员权限审核.html" target="right">会员权限审核</a>
+                            </li>
+                            <li>
+                                <a href="核心企业准入.html" target="right">核心企业准入</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-qianyue"></i>签约管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="会员签约维护.html" target="right">会员签约维护</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-zijin"></i>会员资金管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="会员账户明细.html" target="right">会员账户明细</a>
+                            </li>
+                            <li>
+                                <a href="会员资金明细.html" target="right">会员资金明细</a>
+                            </li>
+                            <li>
+                                <a href="会员授信管理.html" target="right">会员授信管理</a>
+                            </li>
+                            <li>
+                                <a href="会员提款审核.html" target="right">会员提款审核</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-user"></i>商户账户管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="商户账户维护.html"  target="right">商户账户维护</a>
+                            </li>
+                            <li>
+                                <a href="商户授信明细.html"  target="right">商户授信明细</a>
+                            </li>
+                            <li>
+                                <a href="商户资金明细.html"  target="right">商户资金明细</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-cangchu"></i>仓储管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="仓单查询.html"  target="right">仓单查询</a>
+                            </li>
+                            <li>
+                                <a href="仓库管理.html"  target="right">仓库管理</a>
+                            </li>
+                            <li>
+                                <a href="库存管理.html"  target="right">库存管理</a>
+                            </li>
+                            <li>
+                                <a href="仓单质押审核.html" target="right">仓单质押审核</a>
+                            </li>
+                            <li>
+                                <a href="入库明细.html" target="right">入库明细</a>
+                            </li>
+                            <li>
+                                <a href="出库明细.html" target="right">出库明细</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-fengkong"></i>风控管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="每日指导价管理.html"  target="right">每日指导价管理</a>
+                            </li>
+                            <li>
+                                <a href="指导价维护审核.html"  target="right">指导价维护审核</a>
+                            </li>
+							<!--
+                            <li>
+                                <a href="历史指导价.html"  target="right">历史指导价</a>
+                            </li>
+							-->
+                            <li>
+                                <a href="警戒线查询.html"  target="right">警戒线查询</a>
+                            </li>
+                            <!-- <li>
+                                <a href="文本管理.html"  target="right">文本管理</a>
+                            </li> -->
+                        </ul>
+                    </li>
+                    <!-- <li>
+                        <p>
+                            <i class="icon  icon-yewu1"></i>自有资金管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="支用申请审核.html"  target="right">支用申请审核</a>
+                            </li>
+                            <li>
+                                <a href="支用申请复核.html"  target="right">支用申请复核</a>
+                            </li>
+                            <li>
+                                <a href="定向支付提交.html"  target="right">定向支付提交</a>
+                            </li>
+                            <li>
+                                <a href="定向支付审核.html" target="right">定向支付审核</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                    <li>
+                        <p>
+                            <i class="icon  icon-dingdan"></i>融资订单管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="融资订单管理.html"  target="right">融资订单管理</a>
+                            </li>
+                            <li>
+                                <a href="交易订单维护.html"  target="right">交易订单维护</a>
+                            </li>
+                            <li>
+                                <a href="库存明细关联审核.html"  target="right">库存明细关联审核</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-jianguan"></i>监管方管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="监管方出库审核.html"  target="right">监管方出库审核</a>
+                            </li>
+                            <li>
+                                <a href="监管方管理.html"  target="right">监管方管理</a>
+                            </li>
+                            <li>
+                                <a href="监管方质押审核.html"  target="right">监管方质押审核</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-canshu"></i>参数管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="费率维护.html"  target="right">费率维护</a>
+                            </li>
+                            <li>
+                                <a href="费率新增审核.html"  target="right">费率新增审核</a>
+                            </li>
+                            <li>
+                                <a href="质押率维护.html"  target="right">质押率维护</a>
+                            </li>
+                            <li>
+                                <a href="质押率审核.html"  target="right">质押率审核</a>
+                            </li>
+                            <li>
+                                <a href="警戒线维护.html"  target="right">警戒线维护</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-zhuanyi"></i>货权转移管理</p>
+                        <ul class="list-unstyled hidden">
+                            <li>
+                                <a href="货权转移管理.html"  target="right">货权转移管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+    </div>
+    <div class="main-content">
+        <iframe rameborder=0 name="right" src="会员权限审核.html"></iframe>
+    </div>
+</div>
+</body>
+<script>
+    $(window).ready(function(){
+        // 设置高度
+        var wh= $(window).height()-85;
+        $('.main-container').css('height',wh);
+        $(window).resize(function(){
+            var wh= $(window).height()-85;
+            $('.main-container').css('height',wh);
+        })
+        // 菜单收缩
+        $('.leftMenu ul p').click(function(){
+            $(this).next().slideToggle();
+            $(this).toggleClass('jian');
+        })
+        $('.leftMenu ul li ul li').click(function(){
+            $('.leftMenu ul  li ul li').removeClass('active');
+            $(this).addClass('active');
+        })
+    });    
+</script>
+</html>

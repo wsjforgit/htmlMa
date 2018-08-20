@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>仓库管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>仓储管理</li>
+            <li>仓库管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">仓库名称：</label>
+                <input class="form-control">
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">仓库监管方：</label>
+                <input class="form-control">
+            </div> -->
+            <div class="form-group">
+                <label class="control-label">仓库编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">准入银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+					<option>工商银行</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">授信生效日：</label>
+                <input class="form-control"> -
+                <input class="form-control">
+            </div> -->
+            <div class="form-group">
+                <label class="control-label">仓库类型：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">仓库状态：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>仓库编号</th>
+                <th>仓库名称</th>
+                <!-- <th>仓库监管方</th> -->
+                <!-- <th>仓库公司名称</th> -->
+                <th>准入银行</th>
+                <th>仓库类型</th>
+                <th>仓库状态</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-blue">JCK90012221</td>
+                    <td>长春通钢仓储</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>工商银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>   
+                <tr>
+                    <td class="text-blue">JCK90012222</td>
+                    <td>苏州首钢钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>建设银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>  
+                <tr>
+                    <td class="text-blue">JCK90012223</td>
+                    <td>首钢鹏龙钢材有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>农业银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="text-blue">JCK90012224</td>
+                    <td>佛山首钢中金钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>招商银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>   
+                <tr>
+                    <td class="text-blue">JCK90012225</td>
+                    <td>重庆首钢武中汽车部件有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>平安银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-blue">JCK90012226</td>
+                    <td>哈尔滨首钢武中钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>工商银行银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="text-blue">JCK90012227</td>
+                    <td>宁波首钢浙金钢材有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>农行银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="text-blue">JCK90012228</td>
+                    <td>广东省中山金属钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>建设银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>  
+                <tr>
+                    <td class="text-blue">JCK90012229</td>
+                    <td>首钢（青岛）钢业有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>浦发银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="text-blue">JCK90012230</td>
+                    <td>鄂尔多斯市包钢首瑞材料技术有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>工商银行银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>      
+                <tr>
+                    <td class="text-blue">JCK90012231</td>
+                    <td>株洲首钢汇隆钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>建设银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>  
+                <tr>
+                    <td class="text-blue">JCK90012232</td>
+                    <td>天津物产首钢钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>农行银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr> 
+                <tr>
+                    <td class="text-blue">JCK90012233</td>
+                    <td>沈阳首钢钢材加工配送有限公司</td>
+                    <!-- <td>锦程物流</td> -->
+                    <!-- <td>通钢</td> -->
+                    <td>建设银行</td>
+                    <td>合作库</td>
+                    <td>正常</td>
+                    <td>
+                        <a href="#">挂起</a>
+                    </td>
+                </tr>               
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总1条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addcangku">新 增</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+    <div id="addcangku" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增仓库</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库编号：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库名称：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库公司名称：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库公司地址：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库监管方：</label>
+                                <div class="col-8">
+                                    <select class="form-control" data-validate="required:不能空！">
+                                        <option value="">请选择</option>
+                                        <option>仓库监管方</option>
+                                    </select>
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">仓库类型：</label>
+                                <div class="col-8">
+                                    <select class="form-control" data-validate="required:不能空！">
+                                        <option value="">请选择</option>
+                                        <option>监管库</option>
+                                    </select>
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">准入银行：</label>
+                                <div class="col-8">
+                                    <select class="form-control" data-validate="required:不能空！">
+                                        <option value="">请选择</option>
+                                        <option>工商</option>
+                                    </select>
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">法人姓名：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">联系人：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">联系人手机：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">电话：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">传真：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">邮箱：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">联系地址：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    function fun(i){
+        console.log(i);
+    }
+    $("#page").initPage(71,1,fun);
+</script>
+</html>

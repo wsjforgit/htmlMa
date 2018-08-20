@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>核心企业准入审核</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>签约管理</li>
+            <li>核心企业准入审核</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">核心企业编码：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">核心企业名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">法人姓名：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">联系人姓名：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">准入时间：</label>
+                <input class="form-control"> -
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>核心企业编号</th>
+                <th>核心企业名称</th>
+                <th>法人姓名</th>
+                <th>联系人姓名</th>
+                <th>联系人手机号码</th>
+                <th>准入时间</th>
+                <th>操作</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+				<tr>
+					<td><input name="choosed" type="checkbox"/></td>
+                    <td>20151112123</td>
+                    <td>通钢</td>
+                    <td>李连</td>
+                    <td>司马章</td>
+                    <td>15088854781</td>
+                    <td>2017年11月27日</td>
+                    <td>已审核</td>
+                    <td>
+                        <a href="核心企业准入-新增.html" class="btn btn-xs border-orange">修 改</a>
+                    </td>
+                </tr>  
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总1条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-agree="1">通 过</button>
+            <button class="btn border-orange" data-disagree="1">驳 回</button>
+        </div>
+    </div>
+<!-- 提示框 -->
+<div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">驳回原因</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="hidden" value="">
+                    <textarea style="width: 100%;height: 60px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn border-blue">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

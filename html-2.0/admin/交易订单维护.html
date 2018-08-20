@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>交易订单维护</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>融资订单管理</li>
+            <li>交易订单维护</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">交易合同编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">买方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">卖方名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">关联明细：</label>
+                <select class="form-control">
+                    <option>请选择仓单关联</option>
+                </select>
+            </div>
+            <!-- <div class="form-group">
+                <label class="control-label">成交日期：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div> -->
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>交易合同编号</th>
+                <th>买方名称</th>
+                <th>卖方名称</th>
+                <th>货物总量（吨）</th>
+                <th>货物单价</th>
+                <th>合同总值</th>
+                <th>关联明细</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">SXB1.1-TJ-170-02</td>
+                    <td>通钢</td>
+                    <td>六枝正鑫</td>
+                    <td>9,948.00</td>
+					<td>2915.15</td>
+                    <td class="text-orange">29,000,000.00</td>
+					<td>YL-2014-0125</td>
+                    <td>已关联</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">SXB1.1-TJ-1703-03</td>
+                    <td>通钢</td>
+                    <td>大安灰石厂</td>
+                    <td>5,038.00</td>
+                    <td>3009.30</td>
+                    <td class="text-orange">15,160,902.00</td>
+                    <td>YL-2014-0126</td>
+                    <td>已关联</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">ZTB-201701-SH2454</td>
+                    <td>通钢</td>
+                    <td>浙江工业</td>
+                    <td>39,970.00</td>
+                    <td>3078.41</td>
+                    <td class="text-orange">123,044,150.00</td>
+                    <td>KS2016-3-5</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201702-上海13500</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>13,500.00</td>
+                    <td>3078.41</td>
+                    <td class="text-orange">49,950,000.00</td>
+                    <td>KS2017-2-5</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-DB3575</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>3,575.00</td>
+                    <td>4875.88</td>
+                    <td class="text-orange">14,327,895.00</td>
+                    <td>KS2017-3-15</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-DB6449</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>6,449.00</td>
+                    <td>4098.45</td>
+                    <td class="text-orange">25,861,521.00</td>
+                    <td>KS2017-3-16</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-LC5220</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>5,220.00</td>
+                    <td>4167.45</td>
+                    <td class="text-orange">18,662,400.00</td>
+                    <td>KS2017-3-18</td>
+                    <td>已关联</td>
+                </tr>
+				
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-乐从5436</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>5,436.00</td>
+                    <td>4648.09</td>
+                    <td class="text-orange">23,861,521.00</td>
+                    <td>KS2017-3-20</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-乐从6661</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>6,661.00</td>
+                    <td>4998.86</td>
+                    <td class="text-orange">28,469,802.00</td>
+                    <td>KS2017-3-22</td>
+                    <td>已关联</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">TG-ZGW-201703-泉州2971</td>
+					<td>找钢网</td>
+                    <td>通钢</td>
+                    <td>2,971.00</td>
+                    <td>6073.62</td>
+                    <td class="text-orange">12,656,660.00</td>
+                    <td>KS2017-3-25</td>
+                    <td>已关联</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总10条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#myaddmodal">新增交易订单</button>
+			<a href="交易订单维护-关联库存明细.html" class="btn border-orange">关联库存明细</a>
+        </div>
+    </div>
+    <!-- 新增交易订单提示框 -->
+    <div id="myaddmodal" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <form>
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增交易订单</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>交易合同编号：YL-2018-DB-04</p>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">买方名称：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">成交日期：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">卖方名称：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">品名：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">货物重量：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">货物单价：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">合同总价：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">企业合同号：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-6">
+                                <label class="control-label col-4">签订地点：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="form-group col-12">
+                                <label class="control-label col-4">合同备注：</label>
+                                <div class="col-8">
+                                    <textarea class="form-control"></textarea>
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                            <div class="form-group col-12">
+                                <label class="control-label col-4">合同有效期：</label>
+                                <div class="col-8">
+                                    <input class="form-control" data-validate="required:不能空！">
+                                </div>
+                                <div class="col-8 col-offset-4 field text-red"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn border-grey" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn border-blue">确定</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

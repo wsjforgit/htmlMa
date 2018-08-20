@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>监管方出库审核</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>监管方管理</li>
+            <li>监管方出库审核</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">申请人编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">申请人：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">出库仓库：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">明细号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">申请时间：</label>
+                <input class="form-control"> - <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>申请人编号</th>
+                <th>申请人</th>
+                <th>出库仓库</th>
+                <th>明细号</th>
+                <th>申请时间</th>
+                <th>品名</th>
+                <th>牌号</th>
+                <th>规格</th>
+                <th>库位</th>
+                <th>库区</th>
+                <th>区域</th>
+                <th>位置号</th>
+                <th>申请出库量</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">02100004824</td>
+                    <td>找钢</td>
+                    <td>东方库</td>
+                    <td>Q-1123</td>
+                    <td>2017-05-12 14:00:00</td>
+                    <td>热轧卷</td>
+                    <td>77H5254252</td>
+                    <td>5.75*1500</td>
+                    <td>D4-2-8</td>
+                    <td>2-8</td>
+                    <td>D4</td>
+                    <td>8</td>
+                    <td>15.00吨</td>
+                    <td>待审核</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">02100004824</td>
+                    <td>找钢</td>
+                    <td>东方库</td>
+                    <td>Q-5463</td>
+                    <td>2017-07-23 9:00:00</td>
+                    <td>冷轧卷</td>
+                    <td>77H6343643</td>
+                    <td>7.75*1500</td>
+                    <td>C3-7-1</td>
+                    <td>7-1</td>
+                    <td>C3</td>
+                    <td>1</td>
+                    <td>35.24.00吨</td>
+                    <td>待审核</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">02100004825</td>
+                    <td>找钢</td>
+                    <td>东方库</td>
+                    <td>Q-2333</td>
+                    <td>2017-10-30 14:00:00</td>
+                    <td>热镀锌</td>
+                    <td>77H58853</td>
+                    <td>11.75*1500</td>
+                    <td>B2-2-3</td>
+                    <td>2-3</td>
+                    <td>B2</td>
+                    <td>3</td>
+                    <td>29.66吨</td>
+                    <td>待审核</td>
+                </tr>
+				<tr>
+                    <td>
+                        <input type="checkbox">
+                    </td>
+                    <td class="text-blue">02100004826</td>
+                    <td>找钢</td>
+                    <td>东方库</td>
+                    <td>Q-9062</td>
+                    <td>2017-11-12 16:00:00</td>
+                    <td>中厚板</td>
+                    <td>77H5736774</td>
+                    <td>11.75*1500</td>
+                    <td>B2-2-4</td>
+                    <td>2-4</td>
+                    <td>B2</td>
+                    <td>4</td>
+                    <td>10.00吨</td>
+                    <td>已审核</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-agree="1">通 过</button>
+            <button class="btn border-orange" data-disagree="1">驳 回</button>
+        </div>
+    </div>
+<!-- 提示框 -->
+<div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">驳回原因</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="hidden" value="">
+                    <textarea style="width: 100%;height: 60px;"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn border-blue">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

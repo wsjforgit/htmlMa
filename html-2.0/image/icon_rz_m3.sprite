@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images" ImageName="icon_rz_m3" IsPhone="false" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="icon-1.png" LocationX="0" LocationY="0" />
+    <Sprite Path="icon-4.png" LocationX="0" LocationY="110" />
+    <Sprite Path="icon-3.png" LocationX="0" LocationY="73" />
+    <Sprite Path="icon-2.png" LocationX="0" LocationY="36" />
+  </SpriteList>
+</SpriteFile>

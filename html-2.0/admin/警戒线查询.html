@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>警戒线查询</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>风控管理</li>
+            <li>警戒线查询</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">会员编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">订单编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>工商</option>
+                    <option>招行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">业务类型：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>工商</option>
+                    <option>招行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">起始日：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">到期日：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>选择状态</option>
+                    <option>正常</option>
+                    <option>负债</option>
+                </select>
+            </div>            
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>会员编号</th>
+                <th>业务类型</th>
+                <th>订单编号</th>
+                <th>贷款编号</th>
+                <th>现质押仓单号</th>
+                <th>原质押仓单号</th>
+                <th>贷款银行</th>
+                <th>质押率</th>
+                <th>质押物原值（元）</th>
+                <th>质押物现值（元）</th>
+                <th>警戒值</th>
+                <th>起始日</th>
+                <th>到期日</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-blue">021004831</td>
+                    <td>预付款融资</td>
+                    <td>YFK0241156262</td>
+                    <td>T89042350</td>
+                    <td>XHD6374848</td>
+                    <td>NS5279805</td>
+                    <td>建设银行</td>
+                    <td>80%</td>
+                    <td class="text-orange">40,000,000.00</td>
+                    <td class="text-orange">36,000,000.00</td>
+                    <td>8%</td>
+                    <td>2017-11-13</td>
+                    <td>2018-11-13</td>
+                    <td>负债</td>
+                </tr>
+                <tr>
+                    <td class="text-blue">010004824</td>
+                    <td>预付款融资</td>
+                    <td>YFK024747673</td>
+                    <td>T8973748373</td>
+                    <td>XHD745848</td>
+                    <td>NS887488</td>
+                    <td>建设银行</td>
+                    <td>80%</td>
+                    <td class="text-orange">30,000,000.00</td>
+                    <td class="text-orange">30,000,000.00</td>
+                    <td>5%</td>
+                    <td>2017-11-13</td>
+                    <td>2018-11-13</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td class="text-blue">010004823</td>
+                    <td>订单融资</td>
+                    <td>YFK02748489</td>
+                    <td>T8936363637</td>
+                    <td>XHD784874</td>
+                    <td>NS6347773</td>
+                    <td>工商银行</td>
+                    <td>5%</td>
+                    <td class="text-orange">6,274,125.00</td>
+                    <td class="text-orange">6,274,125.00</td>
+                    <td>90%</td>
+                    <td>2017-11-13</td>
+                    <td>2018-11-13</td>
+                    <td>正常</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

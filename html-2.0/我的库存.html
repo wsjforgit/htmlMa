@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的库存</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="hender-top">
+                <span>您好！京西供应链欢迎您</span>
+                <ul class="list-inline navbar-right navbarBorderR right">
+                    <li>
+                        <a href="http://www.westscm.com/home.do">返回京西供应链首页</a>
+                    </li>
+                    <li>
+                        <a href="http://www.westscm.com/login!showLogin.do">资产会员中心</a>
+                    </li>
+                    <li>
+                        <a href="会员中心.html">融资会员中心</a>
+                    </li>
+                    <li>
+                        <a href="#">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="#">【退出】</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hender">
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <img src="image/logo.png" style="height: 55px;">
+                        </div>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.westscm.com/home.do">首页</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/supplyIndex.do">资产</a>
+                            </li>
+                            <li class="active">
+                                <a href="融资.html">融资</a>
+                            </li>
+                            <li>
+                                <a href="物流.html">物流</a>
+                            </li>
+                            <li>
+                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do">资讯</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="leftMenu">
+                <p><a href="会员中心.html">融资首页</a></p>
+                <ul class="list-unstyled">
+                    
+                    <li>
+                        <p>
+                            <i class="icon  icon-zijin-"></i>资金信息</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="我的账户.html">我的账户</a>
+                            </li>
+                            <li>
+                                <a href="我的资金.html">我的资金</a>
+                            </li>
+                            <li>
+                                <a href="我的授信.html">我的授信</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="icon  icon-yewu"></i>货物信息</p>
+                        <ul class="list-unstyled">
+                            <li class="active">
+                                <a href="我的库存.html">我的库存</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <p>
+                            <i class="icon  icon-yewu1"></i>我的融资信息</p>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="我要融资.html">我要融资</a>
+                            </li>
+                            <li>
+                                <a href="我的融资订单.html">我的融资订单</a>
+                            </li>
+                            <li>
+                                <a href="我的贷后.html">我的贷后</a>
+                            </li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="content myshouxin">
+                <div class="modul1 margin-b clearfix">
+                    <span class="text-blue"> 通钢 </span>
+                    <span> 欢迎来到会员中心！ 上次登录时间 2017-10-23 14:28:35</span>
+                    <span class="right">
+                        <ul class="list-inline">
+                            <li>
+                                <span class="qiye" data-toggle="tooltip" data-placement="right" data-original-title="会员名称：企业名称 test"></span>
+                            </li>
+                            <li>
+                                <span class="user" data-toggle="tooltip" data-placement="right" data-original-title="会员编号：企业名称 test"></span>
+                            </li>
+                            <li>
+                                <span class="mobli" data-toggle="tooltip" data-placement="right" data-original-title="会员手机号：150****111"></span>
+                            </li>
+                            <li>
+                                <span class="message" src="image/icon_xiaoxi.png"><span class="badge" style="background-color: #ed7601">22</span></span>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <p class="h4">库存统计
+                    <span>
+                        <button class="btn btn-sm btn-link right">导出Eecel</button>
+                    </span>
+                </p>
+                <div class="modul2 margin-b row">
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                        <div class="margin-b bg-grey padding border">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="">仓库名称：</label>
+                                    <input type="text" class="form-control input-sm" id="">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">品名：</label>
+                                    <input type="text" class="form-control input-sm" id="">
+                                </div>
+                                <div class="form-group right">
+                                    <label for="">仓单状态：</label>
+                                    <select class="form-control input-sm" style="width: 160px;">
+                                        <option>选择状态</option>
+										<option>正常</option>
+										<option>占用</option>
+										<option>冻结</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="">关键字：</label>
+                                    <input type="text" class="form-control input-sm" id="">
+                                </div>
+                                <div class="form-group right">
+                                    <button class="btn border-blue btn-sm"> 查 询 </button>
+                                </div>
+                            </form>
+                            <!-- <form class="row">
+                                <div class="col-lg-5">
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" class="form-control" placeholder="输入关键字查询">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="button"> 搜 索 </button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7 so-key">
+                                    <span><a href="#">建设银行</a></span>
+                                    <span><a href="#">公司</a></span>
+                                    <span><a href="#">工商银行</a></span>
+                                    <span><a href="#">保证金</a></span>
+                                    <span><a href="#">成功</a></span>
+                                </div>
+                            </form> -->
+                        </div>
+                        <ul class="list-unstyled list-borderDashed margin-b" style="border-top: 1px #ccc dashed;" id="kucun">
+                            <li>
+                                <div class="text-blue">长春通钢仓库
+                                    <i class="icon icon-jia pull-right text-center" style="width: 30px; cursor: pointer;"></i>
+                                </div>
+                                <div style="display: none;">
+                                    <table class="table table-bordered table-center table-tblue">
+                                        <thead>
+                                            <tr>
+                                                <th>品名</th>
+                                                <th>牌号</th>
+                                                <th>规格</th>
+                                                <th>产地</th>
+                                                <th>库位</th>
+                                                <th>库区</th>
+                                                <th>区域</th>
+                                                <th>位置号</th>
+                                                <th>库存总量</th>
+                                                <th>可提量</th>
+                                                <th>冻结量</th>
+                                                <th>质押量</th>
+                                                <th>直发量</th>
+                                                <th>状态</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="page">
+                            <span>
+                                <a href="#">
+                                    <i class="icon icon-prev"></i>
+                                </a>
+                            </span>
+                            <span>
+                                <a href="#">1</a>
+                            </span>
+                            <span>
+                                <a href="#">2</a>
+                            </span>
+                            <span>
+                                <a href="#">3</a>
+                            </span>
+                            <span>
+                                <a href="#">4</a>
+                            </span>
+                            <span>...</span>
+                            <span>...</span>
+                            <span>
+                                <a href="#">12</a>
+                            </span>
+                            <span>
+                                <a href="#">
+                                    <i class="icon icon-next"></i>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <span>Copyright 2017-2018 All Rights Reserved 版权所有：京西供应链 | 资产交易平台</span>
+    </div>
+</body>
+<script src="js/json2table.js"></script>
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+        // 库存列表展示
+        $('#kucun li i').click(function () {
+            var TDiv = $(this).parent().next();
+            $(this).toggleClass("icon-jia").toggleClass("icon-jian");
+            
+            if ($(this).attr("class").indexOf("icon-jian") > 0 && TDiv.find("table tbody").html() == undefined) {
+                var mask = $(this).parent().append("<div class='mask'>加载中。。。</div>");
+                $.getJSON("json/kucun.json", function (rs) {
+                    $(mask).next().children("table").json2table(rs,"品名");
+                    $(mask).children(".mask").remove();
+                    TDiv.slideToggle();
+                });
+            }else{
+                TDiv.slideToggle();
+            }
+        })
+    })
+</script>
+</html>

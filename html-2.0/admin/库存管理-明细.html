@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>库存管理-明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>仓储管理</li>
+            <li>库存管理</li>
+            <li>明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding">
+            <table class="table table-bordered table-center table-theaddeep">
+                <thead>
+                    <th>会员编号</th>
+                    <th>会员名称</th>
+                    <th>仓库编号</th>
+                    <th>仓库名称</th>
+                    <th>库存编号</th>
+                    <th>库存总重量</th>
+                    <th>可提重量</th>
+                    <th>冻结重量</th>
+                    <th>占用</th>
+                    <th>质押重量</th>
+                    <th>直发重量</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01000003</td>
+                        <td>通钢</td>
+                        <td>JCK90012221</td>
+                        <td>长春通钢仓储</td>
+                        <td>NO1234</td>
+                        <td>100吨</td>
+                        <td>100吨</td>
+                        <td>0吨</td>
+                        <td>0吨</td>
+                       <td>0吨</td>
+                        <td>0吨</td>
+                    </tr>
+                </tbody>
+            </table>
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>明细号</th>
+                <th>品名</th>
+                <th>明细总量</th>
+                <th>明细库存量</th>
+                <th>牌号</th>
+                <th>规格</th>
+                <th>产地</th>
+                <th>库位</th>
+                <th>库区</th>
+                <th>区域</th>
+                <th>位置号</th>
+                <th>可提重量</th>
+                <th>冻结重量</th>
+                <th>质押重量</th>
+                <th>直发重量</th>
+                <th>操作</th>
+                <th>操作</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="3">
+                        <input type="checkbox">
+                    </td>
+                    <td rowspan="2">SKU54353529</td>
+                    <td rowspan="2">热轧卷板</td>
+                    <td rowspan="2">100吨</td>
+					<td>30吨</td>
+                    <td>77H5254252</td>
+                    <td>5.75*1500</td>
+					<td>北京</td>
+                    <td>D4-2-8</td>
+                    <td>2-8</td>
+                    <td>D4</td>
+                    <td>8</td>
+                    <td>30吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td><span>挂起</span> <span>启动</span></td>
+                    <td>出库</td>
+                </tr>
+                <tr>
+                    <td>70吨</td>
+                    <td>77H673653</td>
+                    <td>7.75*1500</td>
+					<td>北京</td>
+                    <td>C3-7-1</td>
+                    <td>7-1</td>
+                    <td>C3</td>
+                    <td>1</td>
+                    <td>70吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td>0吨</td>
+                    <td><span>挂起</span> <span>启动</span></td>
+                    <td>出库</td>
+                </tr>
+                
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" style="min-width: 100px;" data-toggle="modal" data-target="#addkucun">新增明细</button>
+            <button class="btn border-blue" style="min-width: 100px;" data-disagree="1">添加明细库存量</button>
+        </div>
+    </div>
+    <!-- 新增明细提示框 -->
+    <div id="addkucun" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">新增明细</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="clearfix">
+                            <input class="hidden" value="">
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">会员编号：</label><span>01000003</span></div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">仓库编号：</label><span>JCK90012221</span></div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">仓库名称：</label><span>长春通钢仓储</span></div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">明细号：</label><span>SKU54353529</span></div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">品名：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">牌号：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">明细库存量：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">规格：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">产地：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">库位：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">库区：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">区域：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">位置号：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">添加时间：</label><span>2018-01-05</span></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">返回</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 添加明细库存量提示框 -->
+    <div id="mymodal" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form class="form-horizontal">
+                    <div class="modal-header">
+                        <h4 class="modal-title">添加明细库存量</h4>
+                    </div>
+                    <div class="modal-body clearfix">
+                        <input class="hidden" value="">
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">会员编号：</label><span>01000003</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">仓库编号：</label><span>JCK90012221</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">仓库名称：</label><span>长春通钢仓储</span></div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">明细号：</label><span>SKU54353529</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">品名：</label><span>热轧卷板</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">牌号：</label><span>77H673653</span></div>
+                        <div class="clearfix">
+                            <div class="col-6 padding-xs form-group">
+                                <label class="control-label col-5">明细库存量：</label>
+                                <div class="col-7">
+                                    <input class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-6 padding-xs">
+                                <label class="control-label col-5">规格：</label><span>7.75*1500</span></div>
+                        </div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">产地：</label><span>北京</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">库位：</label><span>C3-7-1</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">库区：</label><span>7-1</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">区域：</label><span>C3</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">位置号：</label><span>1</span></div>
+                        <div class="col-6 padding-xs">
+                            <label class="control-label col-5">添加时间：</label><span>2018-01-01</span></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn border-blue">保存</button>
+                        <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i) {
+        console.log(i);
+    }
+    $(function () {
+        $("#page").initPage(71, 1, fun);
+    })
+</script>
+
+</html>

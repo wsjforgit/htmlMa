@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员账户明细</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>会员资金管理</li>
+            <li>会员账户明细</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">开户银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>工商</option>
+                    <option>招行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">签约银行：</label>
+                <select class="form-control">
+                    <option>选择银行</option>
+                    <option>工商</option>
+                    <option>招行</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">会员编号：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">会员名称：</label>
+                <input class="form-control">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>选择</th>
+                <th>会员编号</th>
+                <th>会员名称</th>
+                <th>签约银行</th>
+                <th>开户银行</th>
+                <th>已绑定开户行账号</th>
+                <th>账户总额</th>
+                <th>冻结金额</th>
+                <th>可用余额</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" value="1">
+                    </td>
+                    <td class="text-blue">01000000003</td>
+                    <td>富力铁矿石集团</td>
+                    <td>工商银行</td>
+                    <td>工商银行</td>
+                    <td>6224 0876 3678 908</td>
+                    <td class="text-orange">18000.00</td>
+                    <td class="text-orange">8000.00</td>
+                    <td class="text-orange">10000.00</td>
+                </tr>
+                <tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004823</td>
+					<td>通钢</td>
+					<td>工商银行</td>
+					<td>工商银行</td>
+					<td>6224 0876 4590 432</td>
+                    <td class="text-orange">12000.00</td>
+                    <td class="text-orange">7000.00</td>
+                    <td class="text-orange">5000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004824</td>
+					<td>安阳市飞达商贸有限公司</td>
+					<td>工商银行</td>
+					<td>工商银行</td>
+					<td>6224 0876 8573 832</td>
+                    <td class="text-orange">10000.00</td>
+                    <td class="text-orange">7000.00</td>
+                    <td class="text-orange">3000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004825</td>
+					<td>宁波鑫之大钢铁贸易有限公司</td>
+					<td>建设银行</td>
+					<td>建设银行</td>
+					<td>6224 0876 8905 743</td>
+                    <td class="text-orange">15000.00</td>
+                    <td class="text-orange">5000.00</td>
+                    <td class="text-orange">10000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">01000000021</td>
+					<td>恒大钢铁集团</td>
+					<td>中国银行</td>
+					<td>中国银行</td>
+					<td>6224 0876 6321 783</td>
+                    <td class="text-orange">50000.00</td>
+                    <td class="text-orange">10000.00</td>
+                    <td class="text-orange">400000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004828</td>
+					<td>上海早程实业有限公司</td>
+					<td>工商银行</td>
+					<td>工商银行</td>
+					<td>6224 0876 1122 543</td>
+                    <td class="text-orange">1000000.00</td>
+                    <td class="text-orange">10000.00</td>
+                    <td class="text-orange">9000000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004827</td>
+					<td>上海中丙实业有限公司</td>
+					<td>农业银行</td>
+					<td>农业银行</td>
+					<td>6224 0876 6708 478</td>
+                    <td class="text-orange">250000.00</td>
+                    <td class="text-orange">70000.00</td>
+                    <td class="text-orange">1800000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004829</td>
+					<td>永康市恒信模具厂</td>
+					<td>农业银行</td>
+					<td>农业银行</td>
+					<td>6224 0876 5573 283</td>
+                    <td class="text-orange">200000.00</td>
+                    <td class="text-orange">30000.00</td>
+                    <td class="text-orange">170000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004830</td>
+					<td>上海益民金属材料有限公司</td>
+					<td>建设银行</td>
+					<td>建设银行</td>
+					<td>6224 0876 5573 214</td>
+                    <td class="text-orange">540000.00</td>
+                    <td class="text-orange">90000.00</td>
+                    <td class="text-orange">450000.00</td>
+				</tr>
+				<tr>
+					<td ><input name="choosed" type="checkbox"/></td>
+					<td class="text-blue">02100004831</td>
+					<td>上海彪赢实业有限公司</td>
+					<td>中国银行</td>
+					<td>中国银行</td>
+					<td>6224 0876 7753 907</td>
+                    <td class="text-orange">350000.00</td>
+                    <td class="text-orange">300000.00</td>
+                    <td class="text-orange">50000.00</td>
+				</tr>
+            </tbody>
+        </table>
+        <div class="pages">
+            <span>共1页 总10条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>

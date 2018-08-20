@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>每日指导价管理</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+	<script src="js/My97DatePicker/WdatePicker.js"></script>
+</head>
+
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>风控管理</li>
+            <li>每日指导价管理</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">商品大类：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">种类：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">品名：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">价格日期：</label>
+                <input class="form-control Wdate" id="data1" onclick="WdatePicker({maxDate:'#F{$dp.$D(\'data2\')}',el:this,dateFmt:'yyyy-MM-dd'})"> - <input id="data2" class="form-control Wdate" onclick="WdatePicker({minDate:'#F{$dp.$D(\'data1\')}',el:this,dateFmt:'yyyy-MM-dd'})">
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>品名</th>
+                <th>材料</th>
+                <th>规格</th>
+                <th style="width: 110px">城市</th>
+                <th>日期</th>
+                <th style="width:65%;">价格日期</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>螺纹钢</td>
+                    <td>HRB400</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c0">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c0">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c0">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c0">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c0">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c0" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr> 
+				<tr>
+                    <td>钢铁</td>
+                    <td>热轧</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c1">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c1">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c1">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c1">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c1">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c1" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>钢铁</td>
+                    <td>优刚</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c0">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c0">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c0">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c0">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c0">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c2" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr> 
+				<tr>
+                    <td>钢铁</td>
+                    <td>硅钢</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c1">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c1">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c1">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c1">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c1">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c3" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>钢铁</td>
+                    <td>型钢</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c0">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c0">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c0">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c0">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c0">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c4" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr> 
+				<tr>
+                    <td>废钢</td>
+                    <td>废钢</td>
+                    <td>20mm</td>
+                    <td>
+                        <select name="" id="" class="form-control">
+                            <option value="">选择城市</option>
+                            <option value="">上海</option>
+                            <option value="">广州</option>
+                            <option value="">北京</option>
+                            <option value="">天津</option>
+                            <option value="">沈阳</option>
+                            <option value="">哈尔滨</option>
+                            <option value="">杭州</option>
+                            <option value="">南京</option>
+                            <option value="">济南</option>
+                            <option value="">重庆</option>
+                        </select>
+                        <label class="margin-r"><input type="checkbox" name="" id="">上海 </label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">广州</label>
+                        <label class="margin-r"><input type="checkbox" name="" id="">北京</label>
+                    </td>
+                    <td>
+                        <span class="text-blue btn btn-block" data-week="1" data-id="c1">近七天</span>
+                        <span class="btn btn-block" data-quarter="1" data-id="c1">近三月</span>
+                        <span class="btn btn-block" data-halfyear="1" data-id="c1">近六月</span>
+                        <span class="btn btn-block" data-year="1" data-id="c1">近一年</span>
+                        <span class="btn btn-block" data-triennium="1" data-id="c1">近三年</span>
+                    </td>
+                    <td>
+                        <div id="c5" style="height: 160px; min-width: 600px;"></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共11页</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10" id="page"></ul>
+            <span>跳转到 </span><input class="form-control input-xs" style="width: 60px;display: inline-block;vertical-align: middle; margin-top: -39px;"> <button class="btn border-blue btn-xs" style="margin-top: -39px;">跳转</button>
+        </div>
+        <div class="text-center margin">
+            <button class="btn border-blue" data-disagree="1">维护今日指导价</button>
+        </div>
+    </div>
+    <!-- 提示框 -->
+<div id="mymodal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form>
+                <div class="modal-header">
+                    <h4 class="modal-title">维护今日指导价</h4>
+                </div>
+                <div class="modal-body">
+                    <input class="hidden" value="">
+                    <div class="clearfix">
+                        <div class="form-group col-6">
+                            <label>商品大类：</label>
+                            <span>钢铁</span>
+                        </div>
+                        <div class="form-group col-6">
+                            <label>商品小类：</label>
+                            <span>热轧卷</span>
+                        </div>
+                        <div class="form-group col-6">
+                            <label>商品品名：</label>
+                            <span>热轧卷板</span>
+                        </div>
+                        <div class="form-group col-6">
+                            <label>昨日指导价：</label>
+                            <span>100.00元</span>
+                        </div>
+                        <div class="form-group col-6">
+                            <label>今日指导价：</label>
+                            <input class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-grey" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn border-blue">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+<script src="js/admin.js"></script>
+<script src="js/audit.js"></script>
+<script>
+    // 分页初始化
+    function fun(i) {
+        // $("table tbody").json2table([{
+        //     "id": 1,
+        //     "订单编号": "1000001",
+        //     "商品大类": "钢铁",
+        //     "种类": "热轧卷板",
+        //     "品名": "热轧卷板",
+        //     "日期": "<p>近七天</p><p>近三月</p><p>近六月</p><p>近一年</p><p>近三年</p>",
+        //     "价格日期": {
+        //         "date": ['2017-12-12', '2017-12-13', '2017-12-14', '2017-12-15'],
+        //         "data": [0, 200, 300, 200]
+        //     },
+        //     "当天指导价": "1000",
+        //     "状态": "待审核"
+        // }, {
+        //     "id": 1,
+        //     "订单编号": "1000001",
+        //     "商品大类": "钢铁",
+        //     "种类": "热轧卷板",
+        //     "品名": "热轧卷板",
+        //     "日期": "<p data-7='1'>近七天</p><p>近三月</p><p>近六月</p><p>近一年</p><p>近三年</p>",
+        //     "价格日期": {
+        //         "date": ['2017-12-12', '2017-12-13', '2017-12-14', '2017-12-15'],
+        //         "data": [0, 200, 300, 200]
+        //     },
+        //     "当天指导价": "1000",
+        //     "状态": "待审核"
+        // }], "", {
+        //     "id": "checkbox",
+        //     "价格日期": "lineChart"
+        // });
+    }
+    $(function () {
+        fun(1);
+        var names=['上海','广州','北京']
+        var c0dates=['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'];
+        var c0datas =[[4510,4390,4390,4390,4390,4400,4400],[4910,4800,4800,4800,4820,4820,4820],[4400,4280,4280,4280,4280,4280,4270]];
+        $('table').on('click','[data-week]',function(){
+            c0dates=['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'];
+            c0datas =[[4050, 4070, 4120, 4100, 4130, 4170, 4200]];
+            chat(this,c0dates,c0datas);
+        })
+        $('table').on('click','[data-quarter]',function(){
+            c0dates=['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14','2018-08-13','2018-08-12','2018-08-11','2018-08-10', '2018-08-9', '2018-08-8', '2018-08-7','2018-08-6','2018-08-5','2018-08-4','2018-08-3', '2018-08-2', '2018-08-1'];
+            c0datas = [[4050, 4070, 4120, 4100, 4130, 4170, 4200, 4200,4160,4090,4120,4150,4170,4150,4130,4170,4120,4240,4290,4290]]
+            chat(this,c0dates,c0datas);
+        })
+        $('table').on('click','[data-halfyear]',function(){
+            c0dates=['2017-11-1', '2017-11-2', '2017-11-6', '2017-11-8','2017-11-9', '2017-11-10', '2017-11-13', '2017-11-14','2017-11-15', '2017-11-16', '2017-11-17', '2017-11-20','2017-11-21', '2017-11-22', '2017-11-23', '2017-11-24','2017-11-27','2017-11-28', '2017-11-29', '2017-11-30', '2017-12-01','2017-12-04', '2017-12-05', '2017-12-06', '2017-12-07'];
+            c0datas = [[4050, 4070, 4120, 4100, 4130, 4170, 4200, 4200,4160,4090,4120,4150,4170,4150,4130,4170,4120,4240,4290,4290,4350,4310,4290,4330]]
+            chat(this,c0dates,c0datas);
+        })
+        $('table').on('click','[data-year]',function(){
+            c0dates=['2017-11-1', '2017-11-2', '2017-11-6', '2017-11-8','2017-11-9', '2017-11-10', '2017-11-13', '2017-11-14','2017-11-15', '2017-11-16', '2017-11-17', '2017-11-20','2017-11-21', '2017-11-22', '2017-11-23', '2017-11-24','2017-11-27','2017-11-28', '2017-11-29', '2017-11-30', '2017-12-01','2017-12-04', '2017-12-05', '2017-12-06', '2017-12-07'];
+            c0datas = [[4050, 4070, 4120, 4100, 4130, 4170, 4200, 4200,4160,4090,4120,4150,4170,4150,4130,4170,4120,4240,4290,4290,4350,4310,4290,4330]]
+            chat(this,c0dates,c0datas);
+        })
+        $('table').on('click','[data-triennium]',function(){
+            c0dates=['2017-11-1', '2017-11-2', '2017-11-6', '2017-11-8','2017-11-9', '2017-11-10', '2017-11-13', '2017-11-14','2017-11-15', '2017-11-16', '2017-11-17', '2017-11-20','2017-11-21', '2017-11-22', '2017-11-23', '2017-11-24','2017-11-27','2017-11-28', '2017-11-29', '2017-11-30', '2017-12-01','2017-12-04', '2017-12-05', '2017-12-06', '2017-12-07'];
+            c0datas = [[4050, 4070, 4120, 4100, 4130, 4170, 4200, 4200,4160,4090,4120,4150,4170,4150,4130,4170,4120,4240,4290,4290,4350,4310,4290,4330]]
+            chat(this,c0dates,c0datas);
+        })
+        function chat(that,dates,datas){
+            $(that).siblings().removeClass('text-blue');
+            $(that).addClass('text-blue');
+            var id =$(that).data('id');
+            $().ch(id,names,dates,datas );
+        }
+        $().ch('c0',names,c0dates ,c0datas );
+		
+		$().ch('c1',names, ['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'], 
+		[[4970,4890,4890,4890,4910,4920,4920],[5280,5220,5220,5220,5220,5220,5210],[4570,4490,4490,4490,4490,4490,4490]]);
+        $().ch('c2',names, ['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'], 
+		[[5240, 5235, 5330, 5330, 5326, 5323, 5323]]);
+        $().ch('c3',names, ['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'], 
+		[[5693, 5693, 5693, 5693, 5660, 5660, 5660]]);
+        $().ch('c4',names, ['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'], 
+		[[4433, 4433, 4433, 4433, 4433, 4433, 4433]]);
+        $().ch('c5',names, ['2018-08-20','2018-08-19','2018-08-18','2018-08-17', '2018-08-16', '2018-08-15', '2018-08-14'], 
+		[[2330, 2332, 2332, 2342, 2336, 2338, 2338]]);
+        // 分页
+        $("#page").initPage(71, 1, fun);
+    })
+</script>
+
+</html>
