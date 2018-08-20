@@ -40,10 +40,11 @@ ul, ol {
 
 .hender .navbar-header {
   float: left;
+  margin-right: 340px;
 }
 
 .hender ul {
-  float: left;
+  float: right;
 }
 
 .hender ul li {
