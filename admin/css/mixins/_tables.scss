@@ -9,9 +9,9 @@ $table-condensed-cell-padding:  5px !default;
 $table-bg:                      transparent !default;
 
 $table-bg-thead: #243843;
-//** Background color used for `.table-striped`.
+//** 背景色用于 `.table-striped`.
 $table-bg-accent:               #dfeefd !default;
-//** Background color used for `.table-hover`.
+//** 背景色用于 `.table-hover`.
 $table-bg-hover:                #dfeefd !default;
 $table-bg-active:               $table-bg-hover !default;
 
@@ -244,6 +244,13 @@ table {
   > thead > tr > th {
     background-color: $table-bg-thead;
     color: #fff;
+    border:$table-bg-thead;
+  } 
+}
+.table-grey{
+  > thead > tr > th {
+    background-color: #eee;
+    color: #666;
     border:$table-bg-thead;
   } 
 }

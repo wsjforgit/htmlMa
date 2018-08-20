@@ -48,6 +48,13 @@ input[type="checkbox"]:focus {
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
+.input-xs {
+  height: 22px;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
 .input-sm {
   height: 30px;
   padding: 5px 10px;
@@ -58,7 +65,31 @@ input[type="checkbox"]:focus {
 .form-group{
   margin-bottom: 15px;
 }
-form.form-inline{
+table {
+  .form-group{
+    margin-bottom: 0;
+  } 
+  .check-error{
+    .popover{
+      border-color: #f00;
+      color: #f00;
+      font-size: 12px;
+      span{
+        margin-top: 0px;
+      }
+      .arrow{
+        border-bottom-color: #f00;
+      }
+    }
+  }
+  .check-success{
+    .popover{
+      display: none;
+    }
+  }
+}
+
+.form-inline{
   .form-group{
     margin: 0px 20px 10px 0;
     display: inline-block;
@@ -101,7 +132,7 @@ form.form-inline{
   }
   span{
     margin-top: 7px;
-    display: block;
+    // display: block;
   }
 }
 
@@ -125,7 +156,7 @@ form.form-inline{
     }
     span{
       margin-top: 7px;
-      display: block;
+      display: inline-block;
     }
     .has-feedback .form-control-feedback {
       right: 15px;
@@ -133,4 +164,7 @@ form.form-inline{
   }
   .field{
     margin-top: 7px;
+    span{
+      display: initial;
+    }
   }

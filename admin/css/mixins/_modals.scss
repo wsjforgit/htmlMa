@@ -7,6 +7,7 @@
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
 
+$modal-title-bg:#243843;
 
 $border-radius-large:5px;
 $zindex-modal-background:  1040 !default;
@@ -16,7 +17,7 @@ $line-height-base:1.5;
 $modal-inner-padding:         15px !default;
 
 //** Padding applied to the modal title
-$modal-title-padding:         10px !default;
+$modal-title-padding:         5px !default;
 //** Modal title line-height
 $modal-title-line-height:     $line-height-base !default;
 
@@ -116,7 +117,7 @@ $modal-sm:                    300px !default;
 // Modal header
 // Top section of the modal w/ title and dismiss
 .modal-header {
-  background-color: $blue;
+  background-color: $modal-title-bg;
   color: #fff;
   text-align: center;
   padding: $modal-title-padding;

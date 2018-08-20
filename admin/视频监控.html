@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>视频监控</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>视频监控</li>
+            <li>视频监控</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <div class="border col-1">
+            <ul class="list-unstyled">
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_1.mp4">仓库1</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_2.mp4">仓库2</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_3.mp4">仓库3</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_4.mp4">仓库4</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_5.mp4">仓库5</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180617_6.mp4">仓库6</button></li>
+            </ul>
+        </div>
+        <div class="col-11">
+            <video id="video" src="" style="width: 100%;" controls ></video>
+        </div>
+    </div>
+</body>
+<script>
+$(function(){
+    $('body').on('click','[data-click]',function(){
+        var ck = $(this).data('click');
+        var url = $(this).data('url');
+        $('li button[data-click]').removeClass('text-red')
+        $(this).addClass('text-red')
+        if(ck=="video"){
+            console.log(url);
+            $('#video').attr('src',url);
+        }
+    })
+})
+</script>
+</html>

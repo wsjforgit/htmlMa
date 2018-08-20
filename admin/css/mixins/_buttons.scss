@@ -107,3 +107,23 @@ $orange:#f40;
         }
     }
 }
+
+.btn-link {
+    font-weight: normal;
+    color: #337ab7;
+    border-radius: 0;
+    border-color: transparent;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: transparent;
+        color: #23527c;
+        text-decoration: underline;
+        background-color: transparent;
+    }
+    &[disabled]{
+        border-color: transparent;
+    }
+  }
