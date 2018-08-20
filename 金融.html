@@ -26,9 +26,17 @@
             position: absolute;
             top: 0;
             right: 0;
-            background-color: rgba(25, 25, 25, 0.5);
+            background-color: rgba(25, 25, 25, 0);
             height: 100%;
-            width: 300px;
+            width: 500px;
+        }
+        .banner .login .bt{
+            fill:#000000; 
+            fill-opacity:0;
+            stroke-width:1;
+            stroke:#fff;
+            stroke-dasharray: 65;
+            stroke-dashoffset: 8;
         }
         .tab-pane{
             height: 360px;
@@ -78,21 +86,26 @@
             position: relative;
         }
         .c2 div .cc:hover,.c2 div:hover .cc{
+            margin-left: 15px;
+            margin-right: 20px;
             top:50%;
             left:45%;
             bottom: 50%;
             right: 45%;
-            border-radius: 50%;
-        }
-        .c2 .cc{
-            margin-left: 15px;
-            margin-right: 20px;
+            /* border-radius: 50%; */
             position: absolute;
             top:0;
             left:0;
             bottom: 0;
             right: 0;
-            background-color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.3);
+            
+        }
+        .c2 .cc{
+            top:50%;
+            left:45%;
+            bottom: 50%;
+            right: 45%;
             transition: top .5s,left .5s,bottom .5s,right .5s,border-radius 0.1s;
             -moz-transition: top 1s,left 1s,bottom 1s,right 1s,border-radius 0.2s;	/* Firefox 4 */
             -webkit-transition: top .5s,left .5s,bottom .5s,right .5s,border-radius 0.1s;	/* Safari 和 Chrome */
@@ -150,9 +163,14 @@
         }
         .foots_nav{
             color: #ddd;
+            height: 179px;
+        }
+        .foots_nav .h5{
+            font-size: 16px;
         }
         .foots_nav a{
             color: #7a7a7a;
+            font-size: 14px;
         }
         .foots_nav a:hover{
             color: #ddd;
@@ -186,24 +204,24 @@
             <div class="hender">
                 <div class="container">
                     <div class="row">
-                        <div class="navbar-header">
-                            <img src="image/logo.png" style="height: 51px;">
+                        <div class="navbar-header" style="margin-right: 360px;">
+                            <a href="http://www.westscm.com/home.do"><img src="image/logo.png" style="height: 51px;"></a>
                         </div>
                         <ul class="list-inline">
                             <li>
-                                <a href="http://www.westscm.com/home.do">首页</a>
+                                <a href="http://www.westscm.com/home.do"  target="_blak">首页</a>
                             </li>
                             <li>
-                                <a href="http://www.westscm.com/supplyIndex.do">资产</a>
+                                <a href="http://www.westscm.com/supplyIndex.do"  target="_blak"><i class="icon-hot"></i>资产</a>
                             </li>
                             <li class="active">
-                                <a href="金融.html">金融</a>
+                                <a href="金融.html"><i class="icon-hot"></i>金融</a>
                             </li>
                             <!-- <li>
                                 <a href="物流.html">物流</a>
                             </li> -->
                             <li>
-                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do">资讯</a>
+                                <a href="http://www.westscm.com/siteImsNews!newsIndex.do"  target="_blak">资讯</a>
                             </li>
                         </ul>
                     </div>
@@ -237,19 +255,23 @@
                     </div>
                 </div>
                 <!-- Controls -->
-                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <!-- <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
                     <span class="icon icon-prev" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
                 <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
                     <span class="icon icon-next" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
-                </a>
+                </a> -->
             </div>
-            <!-- <div class="login">
-                <div style="margin-top:45px;margin-left:20px;background-color: #ccc;height: 240px; width: 260px;">
+            <div class="login">
+                <div style="margin-top: 146px; margin-left: 67px"><img src="./image/banner/banner_hd.jpg" alt=""></div>
+                <div style="margin-top: 50px;margin-right:100px;text-align: right;">
+                    <a href="#" class="btn border-white radius-none">
+                        快速融资
+                    </a>
                 </div>
-            </div> -->
+            </div>
         </div>
         <!-- 第一层 -->
         <div class="margin-b bg-white row">
@@ -361,30 +383,28 @@
     </div>
     <div style="width: 100%;background-color: #252525;">
         <div class="container">
-            <div class="padding row foots_nav">
+            <div class="padding margin row foots_nav">
                 <div class="col-sm-3 col-xs-3">
                     <p class="h5">新手上路</p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=4" target="_blak">会员注册/登录</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=14" target="_blak">会员注册登录</a></p>
                     <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=96" target="_blak">如何成为认证会员</a></p>
                     <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=121" target="_blak">如何成为融资会员</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=15" target="_blak">会员等级及服务范围</a></p>
                 </div>
                 <div class="col-sm-3 col-xs-3">
                     <p class="h5">交易指南</p>
                     <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=128" target="_blak">如何发布供应</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=129" target="_blak">如何发布需求</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=9" target="_blak">如何签订合同</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=10" target="_blak">交易流程</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=129" target="_blak">如何发布求购</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=10" target="_blak">购销合同签署</a></p>
                 </div>
                 <div class="col-sm-3 col-xs-3">
-                    <p class="h5">常见问题</p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=127" target="_blak">忘记密码</a></p>
+                    <p class="h5">金融指南</p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=127" target="_blak">了解银企在线</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=131" target="_blak">了解自有资金放款</a></p>
+                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=132" target="_blak">融资流程</a></p>
                 </div>
                 <div class="col-sm-3 col-xs-3">
                     <p class="h5">关于我们</p>
                     <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=123" target="_blak">企业介绍</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=124" target="_blak">战略布局</a></p>
-                    <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=125" target="_blak">在线客服</a></p>
                     <p><a href="http://www.westscm.com/siteImsNews!newsIndex.do?code=126" target="_blak">联系我们</a></p>
                 </div>
             </div>
@@ -393,7 +413,8 @@
     
     <div class="footer">
         <div class="container">
-            <span>Copyright 2017-2018 All Rights Reserved 版权所有：京西供应链 | 资产交易平台</span>
+            <p>Copyright 2017-2018 All Rights Reserved 版权所有：北京京西供应链管理有限公司</p>
+            <p>京 ICP 备 18034072 号-1</p>
         </div>
     </div>
 </body>
