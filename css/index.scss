@@ -22,7 +22,7 @@ $text-orange:$orange;
 $text-red:$red;
 
 body{
-    font-family:"微软雅黑", Verdana, Arial, 'Helvetica Neue';
+    font-family:"Microsoft YaHei","微软雅黑", Verdana, Arial, 'Helvetica Neue';
     background-color: $grey1;
     font-size: 12px;
     color: #333;
@@ -57,14 +57,27 @@ ul, ol{
         float: left;
     }
     ul{ 
-        float: right;
+        float: left;
         li{
             margin: 0 20px;
             font-size: 16px;
+            a{
+                position: relative;
+                .icon-hot {
+                    position: absolute;
+                    top: -10px;
+                    right: -25px;
+                    display: block;
+                    height: 17px;
+                    width: 26px;
+                    background: url(../image/hot-tb.png) no-repeat center;
+                }
+            }
         }
         li.active a{
             color: #2ba3e4;
         }
+        
     }
 }
 
@@ -503,13 +516,18 @@ ul, ol{
 }
 /* 尾部 */
 .footer{
-    height: 90px;
-    line-height: 90px;
+    height: 100px;
     background-color: #000;
     color: #fff;
     text-align: center;
     .container{
-        background-color: #000;
+        margin: auto; 
+        width: 1200px;
+        line-height: 22px;
+        padding-top: 30px;
+        color: #777;
+        text-align: center;
+        font-size: 14px;
     }
 }
 
