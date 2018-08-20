@@ -8,7 +8,10 @@ $blue: #0096e1;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
+// 去除IE输入框后小叉号
+::-ms-clear,::-ms-reveal{display: none}
 body{
+    font-family: "Microsoft YaHei","Helvetica Neue", Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.5;
@@ -38,7 +41,7 @@ button, input, optgroup, select, textarea {
     height: 80px;
     line-height: 80px;
     width: 100%;
-    background: #069 url('../image/bg-t.png');
+    background: #069 url(../image/bg-t.png) repeat-x;
     img{
         vertical-align: middle;
     }
@@ -189,8 +192,47 @@ button, input, optgroup, select, textarea {
 }
 
 // 分页
+// .pages{
+//     text-align: right;
+//     span{
+//         line-height: 55px;
+//         vertical-align: bottom;
+//         overflow: hidden;
+//     }
+//     .page{
+//         font-size: 12px;
+//         padding: 10px;
+//         display:inline-block;
+//         list-style: none;
+//         &>li{
+//             float: left;
+//             padding: 5px 10px;
+//             cursor: pointer;
+//         }
+//         .pageItem{
+//             border: solid thin #DDDDDD;
+//             margin: 5px;
+//         }
+//         .pageItemActive{
+//             border: solid thin #0099FF;
+//             margin: 5px;
+//             background-color: #0099FF;
+//             color:white;
+//         }
+//         .pageItem:hover{
+//             border: solid thin #0099FF;
+//             background-color: #0099FF;
+//             color:white;
+//         }
+//         .pageItemDisable{
+//             border: solid thin #DDDDDD;
+//             margin: 5px;
+//             background-color: #DDDDDD;
+//         }
+//     }
+// }
 .pages{
-    text-align: right;
+    text-align: center;
     span{
         line-height: 55px;
         vertical-align: bottom;
@@ -198,7 +240,7 @@ button, input, optgroup, select, textarea {
     }
     .page{
         font-size: 12px;
-        padding: 10px;
+        padding: 4px;
         display:inline-block;
         list-style: none;
         &>li{
@@ -207,24 +249,24 @@ button, input, optgroup, select, textarea {
             cursor: pointer;
         }
         .pageItem{
-            border: solid thin #DDDDDD;
+            // border: solid thin #DDDDDD;
             margin: 5px;
         }
         .pageItemActive{
-            border: solid thin #0099FF;
+            // border: solid thin #0099FF;
             margin: 5px;
-            background-color: #0099FF;
-            color:white;
+            // background-color: #0099FF;
+            color:#0099FF;
         }
         .pageItem:hover{
-            border: solid thin #0099FF;
-            background-color: #0099FF;
-            color:white;
+            // border: solid thin #0099FF;
+            // background-color: #0099FF;
+            color:#0099FF;
         }
         .pageItemDisable{
-            border: solid thin #DDDDDD;
+            // border: solid thin #DDDDDD;
             margin: 5px;
-            background-color: #DDDDDD;
+            // background-color: #DDDDDD;
         }
     }
 }
@@ -343,11 +385,102 @@ button, input, optgroup, select, textarea {
         }
     }
 }
+// 上传附件
+.updata{
+    overflow: hidden;
+    vertical-align: middle;
+    a{
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        div{
+            position: absolute;
+            z-index: 10;
+            background-color: rgb(0,0,0);
+            filter: alpha(opacity=50);
+            background-color: rgba(0,0,0,0.5);
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            line-height: 45px;
+            text-align: center;
+            color: #fff;
+            &:hover{
+                color: #f90;
+            }
+        }
+    }
+    input{
+        position: absolute;
+        right: 0;
+        top:0;
+        cursor: pointer;
+    }
+}
+.flie{
+        &.wh{
+            background-color: #ddd;
+            color: #333;
+            border: 1px #999 solid;
+            border-radius: 5px;
+            width: 180px;
+            height: 65px;
+            &>div:first-child{
+                margin:5px;
+                float: left;
+            }
+            &>div+div{
+                margin: 5px;
+                p{
+                    margin: 0;
+                }
+                .delflie{
+                    padding:0 2px;
+                    color: #0099FF;
+                    &:hover{
+                        cursor: pointer;
+                        background-color: #0099FF;
+                        color: #fff;
+                        border-radius: 2px;
+                    }
+                }
+            }
+        }
+        .iconflie{
+            width:50px;
+            height: 50px;
+            background: url(../image/icon-down.png) no-repeat;
+        }
+        .PDF {
+            background-position: 0 0;
+        }
+        .WORD {
+            background-position: 0 -50px;
+        }
+        .Excle {
+            background-position: 0 -100px;
+        }
+        .JPG {
+            background-position: 0 -150px;
+        }
+        .width{
+            width: 160px;
+        } 
+}
+// 公共
+@import 'mixins/_clearfix.scss';
+@import 'mixins/_border-radius.scss';
 //栏格布局
 @import 'mixins/_grid.scss';
+// 下拉菜单 
+@import 'mixins/_dropdowns.scss';
+// 组合按钮
+@import 'mixins/_button-groups.scss';
 // 动画方法
 @import 'mixins/_vendor-prefixes.scss';
 // 提示框
+@import 'mixins/_tooltip.scss';
 @import 'mixins/_modals.scss';
 // 消息框
 @import 'mixins/_alerts.scss';
@@ -355,7 +488,7 @@ button, input, optgroup, select, textarea {
 @import 'mixins/_iconfont.scss';
 @import 'mixins/_forms.scss';
 @import 'mixins/_buttons.scss';
-
+@import 'mixins/_input-groups.scss';
 @import 'mixins/_popover.scss';
 /* 基础样式 */
 .list-unstyled {
@@ -389,4 +522,41 @@ button, input, optgroup, select, textarea {
     display: table;
     content: " ";
     clear: both;
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+}
+
+// 带模糊查询下拉框
+@import 'mixins/_searchableSelect.scss';
+.hide{
+    opacity: 0;
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+}
+[data-toggle=popover]{
+    cursor: pointer;
+}
+// 单行位置超出省略
+.single{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+[data-toggle=modal]{
+    cursor: pointer;
+}
+// table整行变灰色
+.table-gray{
+    td{
+        color: #ccc;
+        a,button,span{
+            color: #ccc;
+        }
+        div{
+            color: initial;
+        }
+    }
 }
