@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>还款统计</title>
+    <link href="css/admin.min.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="border-t-lg">
+        <ul class="list-unstyled breadcrumb padding-sm">
+            <li>
+                <span class="icon icon-shouye"></span>
+            </li>
+            <li>还款统计</li>
+            <li>还款统计</li>
+        </ul>
+    </div>
+    <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
+        <form class="form-inline clearfix">
+            <div class="form-group">
+                <label class="control-label">业务类型：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="control-label">贷款编号：</label>
+                <input type="text" class="form-control">
+            </div>
+            <div class="form-group">
+                <label class="control-label">状态：</label>
+                <select class="form-control">
+                    <option>请选择</option>
+                    <option value="">正常</option>
+                    <option value="">已结清</option>
+                </select>
+            </div>
+            <div class="form-group right">
+                <button class="btn btn-sm border-blue">查 询</button>
+            </div>
+        </form>
+    </div>
+    <div class="border-t-lg padding">
+        <table class="table table-bordered table-center table-theaddeep">
+            <thead>
+                <th>序号</th>
+                <th>选择</th>
+                <th>业务类型</th>
+                <th>贷款编号</th>
+                <th>贷款金额(元)</th>
+                <th>应还金额(元</th>
+                <th>已还金额(元)</th>
+                <th>还款企业</th>
+                <th>到期日</th>
+                <th>状态</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>应付账款融资</td>
+                    <td>YS2018010701</td>
+                    <td class="text-orange">2,300,000.00</td>
+                    <td class="text-orange">2,300,000.00</td>
+                    <td class="text-orange">0.00</td>
+                    <td>通钢</td>
+                    <td>2018-12-01</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>订单融资</td>
+                    <td>DD2018020603</td>
+                    <td class="text-orange">125,000.00</td>
+                    <td class="text-orange">125,000.00</td>
+                    <td class="text-orange">36,243.00</td>
+                    <td>安阳市飞达商贸有限公司</td>
+                    <td>2018-10-20</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>存货融资</td>
+                    <td>CH2018060502</td>
+                    <td class="text-orange">340,430.00</td>
+                    <td class="text-orange">340,430.00</td>
+                    <td class="text-orange">575,006.00</td>
+                    <td>上海彪赢实业有限公司</td>
+                    <td>2018-09-15</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>预付款融资</td>
+                    <td>YF2018040614</td>
+                    <td class="text-orange">1,264,332.00</td>
+                    <td class="text-orange">1,264,332.00</td>
+                    <td class="text-orange">1,125,220.00</td>
+                    <td>上海启华贸易有限公司</td>
+                    <td>2018-08-30</td>
+                    <td>正常</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>订单融资</td>
+                    <td>DD2018020604</td>
+                    <td class="text-orange">750,113.00</td>
+                    <td class="text-orange">750,113.00</td>
+                    <td class="text-orange">452,213.00</td>
+                    <td>上海中丙实业有限公司</td>
+                    <td>2018-08-26</td>
+                    <td>已结清</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>存货融资</td>
+                    <td>CH2018092201</td>
+                    <td class="text-orange">613,000.00</td>
+                    <td class="text-orange">613,000.00</td>
+                    <td class="text-orange">13,000.00</td>
+                    <td>永康市恒信模具厂</td>
+                    <td>2017-12-12</td>
+                    <td>已结清</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>应付账款融资</td>
+                    <td>YS2018010702</td>
+                    <td class="text-orange">354,000.00</td>
+                    <td class="text-orange">354,000.00</td>
+                    <td class="text-orange">134,216.00</td>
+                    <td>通钢</td>
+                    <td>2017-11-30</td>
+                    <td>已结清</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>应付账款融资</td>
+                    <td>YS2018010703</td>
+                    <td class="text-orange">4,369,123.00</td>
+                    <td class="text-orange">4,369,123.00</td>
+                    <td class="text-orange">499,226.00</td>
+                    <td>通钢</td>
+                    <td>2017-11-01</td>
+                    <td>已结清</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>预付款融资</td>
+                    <td>YF2018040615</td>
+                    <td class="text-orange">5,260,364.00</td>
+                    <td class="text-orange">5,260,364.00</td>
+                    <td class="text-orange">3,124,654.00</td>
+                    <td>恒大钢铁集团</td>
+                    <td>2017-10-09</td>
+                    <td>已结清</td>
+                </tr>
+                
+                <tr>
+                    <td>10</td>
+                    <td><input name="choosed" type="checkbox"/></td>
+                    <td>订单融资</td>
+                    <td>DD2018020605</td>
+                    <td class="text-orange">4,694,100.00</td>
+                    <td class="text-orange">4,694,100.00</td>
+                    <td class="text-orange">155,264.00</td>
+                    <td>宁波鑫之大钢铁贸易有限公司</td>
+                    <td>2017-10-01</td>
+                    <td>已结清</td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 分页 -->
+        <div class="pages">
+            <span>共1页 总3条</span>
+            <ul class="page" maxshowpageitem="5" pagelistcount="10"  id="page"></ul>
+        </div>
+        <!-- <div class="text-center margin">
+            <button class="btn border-blue" data-toggle="modal" data-target="#addshanghu">新 增</button>
+        </div> -->
+    </div>
+</body>
+<script src="js/admin.js"></script>
+<script>
+    // 分页初始化
+    function fun(i){
+        console.log(i);
+    }
+    $(function(){
+        $("#page").initPage(71,1,fun);
+    })
+</script>
+</html>
