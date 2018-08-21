@@ -19,18 +19,41 @@
         </ul>
     </div>
     <div class="border-t-lg padding-l-sm padding-t-sm padding-r-sm">
-        <div class="border col-1">
+        <div class="border col-3">
+            <p class="h4">仓库名称</p>
             <ul class="list-unstyled">
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_1.mp4">仓库1</button></li>
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_2.mp4">仓库2</button></li>
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_3.mp4">仓库3</button></li>
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_4.mp4">仓库4</button></li>
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_5.mp4">仓库5</button></li>
-                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-url="video/20180818_6.mp4">仓库6</button></li>
+                <li><button class="btn btn-xs btn-link text-red padding-sm" data-click="video" data-id="1">长春钢铁仓库</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="2">苏州首钢钢材配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="3">首钢鹏龙钢材有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="4">佛山首钢中金钢材加工配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="5">重庆首钢武中汽车部件有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="6">哈尔滨首钢武中钢材加工配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="7">宁波首钢浙金钢材有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="8">广东省中山金属钢材加工配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="9">首钢（青岛）钢业有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="10">鄂尔多斯市包钢首瑞材料技术有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="11">株洲首钢汇隆钢材加工配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="12">天津物产首钢钢材加工配送有限公司</button></li>
+                <li><button class="btn btn-xs btn-link padding-sm" data-click="video" data-id="13">沈阳首钢钢材加工配送有限公司</button></li>
             </ul>
         </div>
-        <div class="col-11">
-            <video id="video" src="video/20180818_1.mp4" style="width: 100%;" controls autoplay></video>
+        <div class="col-9">
+            <div class="col-6" id="video1">
+                <p>区域：F1-01</p>
+                <video src="video/20180818_2.mp4" style="width: 100%;" controls autoplay></video>
+            </div>
+            <div class="col-6" id="video2">
+                <p>区域：F1-02</p>
+                <video src="video/20180818_3.mp4" style="width: 100%;" controls autoplay></video>
+            </div>
+            <div class="col-6" id="video3">
+                <p>区域：F2-01</p>
+                <video src="video/20180818_4.mp4" style="width: 100%;" controls autoplay></video>
+            </div>
+            <div class="col-6" id="video4">
+                <p>区域：F2-02</p>
+                <video src="video/20180818_5.mp4" style="width: 100%;" controls autoplay></video>
+            </div>
         </div>
     </div>
 </body>
@@ -38,12 +61,49 @@
 $(function(){
     $('body').on('click','[data-click]',function(){
         var ck = $(this).data('click');
-        var url = $(this).data('url');
+        var id = $(this).data('id');
         $('li button[data-click]').removeClass('text-red')
         $(this).addClass('text-red')
         if(ck=="video"){
-            console.log(url);
-            $('#video').attr('src',url);
+            var n = id % 3;
+            if(id<3){
+                $('#video1 video').attr('src','video/20180818_'+ (n+1) +'.mp4');
+                $('#video2 video').attr('src','video/20180818_'+ (n+2) +'.mp4');
+                $('#video3 video').attr('src','video/20180818_'+ (n+3) +'.mp4');
+                $('#video4 video').attr('src','video/20180818_'+ (n+4) +'.mp4');
+                $('#video1 p').text('区域：F'+n+'-01');
+                $('#video2 p').text('区域：F'+n+'-02');
+                $('#video3 p').text('区域：F'+n+'-03');
+                $('#video4 p').text('区域：F'+n+'-04');
+            }else if(id<6){
+                $('#video2 video').attr('src','video/20180818_'+ (n+1) +'.mp4');
+                $('#video3 video').attr('src','video/20180818_'+ (n+2) +'.mp4');
+                $('#video4 video').attr('src','video/20180818_'+ (n+3) +'.mp4');
+                $('#video1 video').attr('src','video/20180818_'+ (n+4) +'.mp4');
+                $('#video1 p').text('区域：M'+n+'-01');
+                $('#video2 p').text('区域：M'+n+'-02');
+                $('#video3 p').text('区域：M'+n+'-03');
+                $('#video4 p').text('区域：M'+n+'-04');
+            }else if(id<9){
+                $('#video3 video').attr('src','video/20180818_'+ (n+1) +'.mp4');
+                $('#video4 video').attr('src','video/20180818_'+ (n+2) +'.mp4');
+                $('#video1 video').attr('src','video/20180818_'+ (n+3) +'.mp4');
+                $('#video2 video').attr('src','video/20180818_'+ (n+4) +'.mp4');
+                $('#video1 p').text('区域：N'+n+'-01');
+                $('#video2 p').text('区域：N'+n+'-02');
+                $('#video3 p').text('区域：N'+n+'-03');
+                $('#video4 p').text('区域：N'+n+'-04');
+            }else{
+                $('#video4 video').attr('src','video/20180818_'+ (n+1) +'.mp4');
+                $('#video1 video').attr('src','video/20180818_'+ (n+2) +'.mp4');
+                $('#video2 video').attr('src','video/20180818_'+ (n+3) +'.mp4');
+                $('#video3 video').attr('src','video/20180818_'+ (n+4) +'.mp4');
+                $('#video1 p').text('区域：K'+n+'-01');
+                $('#video2 p').text('区域：K'+n+'-02');
+                $('#video3 p').text('区域：K'+n+'-03');
+                $('#video4 p').text('区域：K'+n+'-04');
+            }
+            
         }
     })
 })
