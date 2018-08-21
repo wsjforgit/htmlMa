@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="应付账款融资-确认融资订单.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/应付账款融资-确认融资订单.html">
+      <file leaf-file-name="预付款融资-选择合同.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/预付款融资-选择合同.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4122449">
-              <caret line="249" column="98" selection-start-line="249" selection-start-column="98" selection-end-line="249" selection-end-column="98" />
+            <state vertical-scroll-proportion="0.68445474">
+              <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,6 @@
         <option value="$PROJECT_DIR$/预付款融资-查看订单.html" />
         <option value="$PROJECT_DIR$/预付款融资-缴纳保证金.html" />
         <option value="$PROJECT_DIR$/预付款融资-货权转移并质押.html" />
-        <option value="$PROJECT_DIR$/预付款融资-选择合同.html" />
         <option value="$PROJECT_DIR$/保理融资-确认融资订单.html" />
         <option value="$PROJECT_DIR$/保理融资-选择合同.html" />
         <option value="$PROJECT_DIR$/保理融资-付款承诺确认.html" />
@@ -77,6 +76,7 @@
         <option value="$PROJECT_DIR$/会员中心.html" />
         <option value="$PROJECT_DIR$/我的权限.html" />
         <option value="$PROJECT_DIR$/应付账款融资-确认融资订单.html" />
+        <option value="$PROJECT_DIR$/预付款融资-选择合同.html" />
       </list>
     </option>
   </component>
@@ -475,12 +475,12 @@
       <option name="number" value="Default" />
       <updated>1534761550176</updated>
       <workItem from="1534761551796" duration="518000" />
-      <workItem from="1534762878230" duration="16522000" />
+      <workItem from="1534762878230" duration="17195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17040000" />
+    <option name="totallyTimeSpent" value="17713000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
@@ -773,14 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/预付款融资-选择合同.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.107143">
-          <caret line="247" column="44" selection-start-line="247" selection-start-column="44" selection-end-line="247" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/预付款融资-缴纳保证金.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.0">
@@ -985,6 +977,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4122449">
           <caret line="249" column="98" selection-start-line="249" selection-start-column="98" selection-end-line="249" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/预付款融资-选择合同.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68445474">
+          <caret line="145" column="42" selection-start-line="145" selection-start-column="42" selection-end-line="145" selection-end-column="42" />
           <folding />
         </state>
       </provider>
