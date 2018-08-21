@@ -21,40 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="订单融资-选择合同.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/订单融资-选择合同.html">
+      <file leaf-file-name="存货融资-选择库存.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/存货融资-选择库存.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.4105504">
-              <caret line="276" column="51" selection-start-line="276" selection-start-column="51" selection-end-line="276" selection-end-column="51" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="订单融资-缴纳保证金.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/订单融资-缴纳保证金.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.571429">
-              <caret line="172" column="46" selection-start-line="172" selection-start-column="46" selection-end-line="172" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="订单融资-确认融资订单.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/订单融资-确认融资订单.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-92.96429">
+            <state vertical-scroll-proportion="0.5489362">
               <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="订单融资-货权转移并质押.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/订单融资-货权转移并质押.html">
+      <file leaf-file-name="存货融资-确认质押.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/存货融资-确认质押.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="156.07143">
+            <state vertical-scroll-proportion="-2.4285715">
               <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
               <folding />
             </state>
@@ -76,8 +56,6 @@
         <option value="$PROJECT_DIR$/存货融资-定向支付.html" />
         <option value="$PROJECT_DIR$/存货融资-查看订单.html" />
         <option value="$PROJECT_DIR$/存货融资-确认融资信息.html" />
-        <option value="$PROJECT_DIR$/存货融资-确认质押.html" />
-        <option value="$PROJECT_DIR$/存货融资-选择库存.html" />
         <option value="$PROJECT_DIR$/我的业务订单.html" />
         <option value="$PROJECT_DIR$/我的融资订单.html" />
         <option value="$PROJECT_DIR$/我的账户.html" />
@@ -103,10 +81,12 @@
         <option value="$PROJECT_DIR$/预付款融资-货权转移并质押.html" />
         <option value="$PROJECT_DIR$/预付款融资-查看订单.html" />
         <option value="$PROJECT_DIR$/预付款融资-缴纳保证金.html" />
-        <option value="$PROJECT_DIR$/订单融资-确认融资订单.html" />
         <option value="$PROJECT_DIR$/订单融资-货权转移并质押.html" />
         <option value="$PROJECT_DIR$/订单融资-选择合同.html" />
         <option value="$PROJECT_DIR$/订单融资-缴纳保证金.html" />
+        <option value="$PROJECT_DIR$/订单融资-确认融资订单.html" />
+        <option value="$PROJECT_DIR$/存货融资-选择库存.html" />
+        <option value="$PROJECT_DIR$/存货融资-确认质押.html" />
       </list>
     </option>
   </component>
@@ -505,12 +485,12 @@
       <option name="number" value="Default" />
       <updated>1534761550176</updated>
       <workItem from="1534761551796" duration="518000" />
-      <workItem from="1534762878230" duration="19298000" />
+      <workItem from="1534762878230" duration="20045000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19816000" />
+    <option name="totallyTimeSpent" value="20563000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1380" height="735" extended-state="0" />
@@ -526,7 +506,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18242122" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12603648" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -593,22 +573,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/存货融资-确认融资信息.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7857144">
-          <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/存货融资-确认质押.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.7857144">
-          <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/存货融资-选择库存.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.7857144">
           <caret line="102" column="60" selection-start-line="102" selection-start-column="60" selection-end-line="102" selection-end-column="60" />
@@ -955,14 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/预付款融资-确认融资订单.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6">
-          <caret line="119" column="47" selection-start-line="119" selection-start-column="44" selection-end-line="119" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/预付款融资-缴纳保证金.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6">
@@ -989,23 +945,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/订单融资-缴纳保证金.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.571429">
+        <state vertical-scroll-proportion="0.42201835">
           <caret line="172" column="46" selection-start-line="172" selection-start-column="46" selection-end-line="172" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/订单融资-确认融资订单.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-92.96429">
-          <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/订单融资-货权转移并质押.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="156.07143">
+        <state vertical-scroll-proportion="-10.022936">
           <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
           <folding />
         </state>
@@ -1015,6 +963,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4105504">
           <caret line="276" column="51" selection-start-line="276" selection-start-column="51" selection-end-line="276" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/订单融资-确认融资订单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="173" column="46" selection-start-line="173" selection-start-column="46" selection-end-line="173" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/预付款融资-确认融资订单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="245" column="114" selection-start-line="245" selection-start-column="110" selection-end-line="245" selection-end-column="114" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/存货融资-确认质押.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4285715">
+          <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/存货融资-选择库存.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5489362">
+          <caret line="137" column="32" selection-start-line="137" selection-start-column="32" selection-end-line="137" selection-end-column="32" />
           <folding />
         </state>
       </provider>
