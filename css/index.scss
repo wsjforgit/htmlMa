@@ -149,7 +149,7 @@ ul, ol{
             a{
             color: $blue;
             }
-            &:before{
+            a:before{
                 content: "";
                 border-left: 3px #ccc solid;
                 top: 0;
@@ -168,7 +168,7 @@ ul, ol{
     border-right: 1px #dadada solid;
     padding-right: 20px;
     &>div{
-        border-bottom: 1px #dadada solid;
+        border-bottom: 1px #ebebeb solid;
         &:last-child{
             border-bottom:0;
         }

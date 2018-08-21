@@ -150,7 +150,7 @@ ul, ol {
   color: #0096e1;
 }
 
-.leftMenu > ul ul li.active:before {
+.leftMenu > ul ul li.active a:before {
   content: "";
   border-left: 3px #ccc solid;
   top: 0;
@@ -169,7 +169,7 @@ ul, ol {
 }
 
 .content > div {
-  border-bottom: 1px #dadada solid;
+  border-bottom: 1px #ebebeb solid;
 }
 
 .content > div:last-child {
