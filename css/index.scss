@@ -845,3 +845,6 @@ select.input-sm{
 .btn-sm, .btn-group-sm>.btn {
     padding: 2.5px 10px;
 }
+[data-toggle=modal]{
+    cursor: pointer;
+}

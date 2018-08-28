@@ -67,7 +67,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">SXB1.1-TJ-1703-02</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">SXB1.1-TJ-1703-02</span></td>
                     <td>通钢</td>
                     <td>六枝正鑫</td>
                     <td>9,948.00</td>
@@ -80,7 +80,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">SXB1.1-TJ-1703-03</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">SXB1.1-TJ-1703-03</span></td>
                     <td>通钢</td>
                     <td>大安灰石场</td>
                     <td>5,038.00吨</td>
@@ -93,7 +93,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201701-SH2454</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201701-SH2454</span></td>
                     <td>通钢</td>
                     <td>浙江工业</td>
                     <td>39,970吨</td>
@@ -106,7 +106,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201703-DB6449</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201703-DB6449</span></td>
                     <td>水钢</td>
                     <td>红发矿业</td>
                     <td>5,000.00</td>
@@ -119,7 +119,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201703-QZ5436</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201703-QZ5436</span></td>
                     <td>通钢</td>
                     <td>浙江工业</td>
                     <td>16,970.00</td>
@@ -132,7 +132,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201702-SH2508</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201702-SH2508</span></td>
                     <td>通钢</td>
                     <td>浙江工业</td>
                     <td>22,421.00</td>
@@ -144,7 +144,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201704-LC5220</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201704-LC5220</span></td>
                     <td>通钢</td>
                     <td>宏源建材</td>
                     <td>2,697.00</td>
@@ -156,7 +156,7 @@
                     <td>
                         <input type="checkbox">
                     </td>
-                    <td class="text-blue">ZTB-201704-SH5049</td>
+                    <td><span class="text-blue" data-toggle="modal" data-target="#mydingdanhao">ZTB-201704-SH5049</span></td>
                     <td>通钢</td>
                     <td>山东阔嘉</td>
                     <td>22,670.00</td>
@@ -193,6 +193,116 @@
                         <button type="submit" class="btn border-blue">确定</button>
                     </div>
                 </form>
+            </div>
+        </div>
+    </div>
+    <!-- 交易合同编号提示框 -->
+    <div id="mydingdanhao" class="modal fade in" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">交易合同编号</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="border padding margin-l-lg margin-r-lg">
+                        <div class="text-center margin">
+                            <h4 class="modal-title">交易合同编号</h4>
+                        </div>
+                        <div class="clearfix">
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-5">卖方名字：</label>
+                                <span>找钢 </span>
+                            </div>
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-6">交易合同编号：</label>
+                                <span>T022017011242343</span>
+                            </div>
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-5">企业合同号：</label>
+                                <span>QR20141121002</span>
+                            </div>
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-5">买方名字：</label>
+                                <span>通钢</span>
+                            </div>
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-5">签订地点：</label>
+                                <span>河北省石家庄市</span>
+                            </div>
+                            <div class="col-4 padding-xs">
+                                <label class="control-label col-5">签订时间：</label>
+                                <span>2017-03-05</span>
+                            </div>
+                        </div>
+                        <div>
+                            <p>经买卖双方友好协商，就供需事宜达成如下约定：</p>
+                            <p>一、买卖商品名称、品牌、规格、数量、单价、及交货仓库</p>
+                            <table class="table table-bordered table-center table-theaddeep">
+                                <thead>
+                                    <tr>
+                                        <th>品名</th>
+                                        <th>品牌</th>
+                                        <th>规格</th>
+                                        <th>数量(吨)</th>
+                                        <th>单价(元/吨)</th>
+                                        <th>金额(元)</th>
+                                        <th>交货仓库</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>天联钢</td>
+                                        <td>热轧钢</td>
+                                        <td>2.5*1000*1.25</td>
+                                        <td>数量</td>
+                                        <td>1000.00</td>
+                                        <td>100000.00</td>
+                                        <td>长春通钢仓库</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td>合计：</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>2.5*1000*1.25</td>
+                                        <td></td>
+                                        <td>100000.00</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="7">人民币大写金额：壹拾万圆整</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <p>二、本合同有效期：2017-01-02至2018-01-18</p>
+                            <table class="table table-bordered">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            买方(章)：
+                                            <br> 法定(委托)代表人：郑丛
+                                            <br> 开户银行：中行
+                                            <br> 账户：6222 4354 5578 458
+                                            <br> 纳税人登记号：S425353754
+                                        </td>
+                                        <td>
+                                            卖方(章)：
+                                            <br> 法定(委托)代表人：李伟
+                                            <br> 开户银行：工商银行
+                                            <br> 账户：6222 4354 4224 429
+                                            <br> 纳税人登记号：S425353353
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn border-blue">打印</button>
+                    <button class="btn border-grey" data-dismiss="modal">关闭</button>
+                </div>
             </div>
         </div>
     </div>
